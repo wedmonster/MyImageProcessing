@@ -1,0 +1,50 @@
+﻿빌드 시작: 2012-10-20 오전 12:36:47
+     1>2 노드의 "H:\Repository\MyImageProcessing\MyImageProcessing\MyImageProcessing.vcxproj" 프로젝트(build 대상)입니다.
+     1>PrepareForBuild:
+         "H:\Repository\MyImageProcessing\Debug\" 디렉터리를 만들고 있습니다.
+       InitializeBuildStatus:
+         "AlwaysCreate"이(가) 지정되었기 때문에 "Debug\MyImageProcessing.unsuccessfulbuild"을(를) 만들고 있습니다.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\MyImageProcessing.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\MyImageProcessing.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ChildFrm.cpp MainFrm.cpp MyImageProcessing.cpp MyImageProcessingDoc.cpp MyImageProcessingView.cpp
+         MyImageProcessingView.cpp
+         MyImageProcessingDoc.cpp
+         MyImageProcessing.cpp
+         MainFrm.cpp
+         ChildFrm.cpp
+         코드를 생성하고 있습니다...
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _DEBUG /l"0x0412" /IDebug\ /nologo /fo"Debug\MyImageProcessing.res" MyImageProcessing.rc 
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\MyImageProcessing.exe.embed.manifest.res" Debug\MyImageProcessing_manifest.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"H:\Repository\MyImageProcessing\Debug\MyImageProcessing.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\MyImageProcessing.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"H:\Repository\MyImageProcessing\Debug\MyImageProcessing.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:\Repository\MyImageProcessing\Debug\MyImageProcessing.lib" /MACHINE:X86 Debug\MyImageProcessing.res
+         Debug\MyImageProcessing.exe.embed.manifest.res
+         Debug\ChildFrm.obj
+         Debug\MainFrm.obj
+         Debug\MyImageProcessing.obj
+         Debug\MyImageProcessingDoc.obj
+         Debug\MyImageProcessingView.obj
+         Debug\stdafx.obj
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\MyImageProcessing.exe.embed.manifest" /manifest Debug\MyImageProcessing.exe.intermediate.manifest "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\MyImageProcessing.exe.embed.manifest.res" Debug\MyImageProcessing_manifest.rc 
+       LinkEmbedManifest:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"H:\Repository\MyImageProcessing\Debug\MyImageProcessing.exe" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\MyImageProcessing.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"H:\Repository\MyImageProcessing\Debug\MyImageProcessing.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:\Repository\MyImageProcessing\Debug\MyImageProcessing.lib" /MACHINE:X86 Debug\MyImageProcessing.res
+         Debug\MyImageProcessing.exe.embed.manifest.res
+         Debug\ChildFrm.obj
+         Debug\MainFrm.obj
+         Debug\MyImageProcessing.obj
+         Debug\MyImageProcessingDoc.obj
+         Debug\MyImageProcessingView.obj
+         Debug\stdafx.obj
+         MyImageProcessing.vcxproj -> H:\Repository\MyImageProcessing\Debug\MyImageProcessing.exe
+       FinalizeBuildStatus:
+         "Debug\MyImageProcessing.unsuccessfulbuild" 파일을 삭제하고 있습니다.
+         "Debug\MyImageProcessing.lastbuildstate"에 연결(touching)하고 있습니다.
+     1>"H:\Repository\MyImageProcessing\MyImageProcessing\MyImageProcessing.vcxproj" 프로젝트를 빌드했습니다(build 대상).
+
+빌드했습니다.
+
+경과 시간: 00:00:18.91
