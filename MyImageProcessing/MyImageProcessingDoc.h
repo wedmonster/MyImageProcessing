@@ -52,4 +52,5 @@ public:
 	virtual BOOL OnSaveDocument(LPCTSTR lpszPathName);
 	afx_msg void OnImgGray();
 	afx_msg void OnImgInv();
+	afx_msg void OnImgBin();
 };

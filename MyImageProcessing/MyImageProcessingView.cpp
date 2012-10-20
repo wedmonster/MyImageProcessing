@@ -71,8 +71,9 @@ void CMyImageProcessingView::OnInitialUpdate()
 	if(pDoc->m_pImage)
 		sizeTotal = CSize(pDoc->m_pImage->GetWidth(), pDoc->m_pImage->GetHeight());
 
-	sizeTotal.cx = sizeTotal.cy = 100;
+	//sizeTotal.cx = sizeTotal.cy = 100;
 	SetScrollSizes(MM_TEXT, sizeTotal);
+	ResizeParentToFit();
 }
 
 

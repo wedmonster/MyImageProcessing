@@ -10,6 +10,7 @@
 #endif
 
 #include "MyImageProcessingDoc.h"
+#include "BinthSet.h"
 
 #include <propkey.h>
 
@@ -25,6 +26,7 @@ BEGIN_MESSAGE_MAP(CMyImageProcessingDoc, CDocument)
 	ON_COMMAND(ID_FILE_OPEN, &CMyImageProcessingDoc::OnFileOpen)
 	ON_COMMAND(ID_IMG_GRAY, &CMyImageProcessingDoc::OnImgGray)
 	ON_COMMAND(ID_IMG_INV, &CMyImageProcessingDoc::OnImgInv)
+	ON_COMMAND(ID_IMG_BIN, &CMyImageProcessingDoc::OnImgBin)
 END_MESSAGE_MAP()
 
 
@@ -216,5 +218,35 @@ void CMyImageProcessingDoc::OnImgInv()
 		}
 	}
 
+	UpdateAllViews(NULL);
+}
+
+
+void CMyImageProcessingDoc::OnImgBin()
+{
+	// TODO: 여기에 명령 처리기 코드를 추가합니다.
+	int x, y;
+	int gray, threshold;
+
+	CBinthSet dlg;
+
+	if(dlg.DoModal() == IDOK)
+	{
+		CxImage tmp;
+		tmp.Copy(*m_pImage);
+
+		threshold = dlg.m_binth;
+
+		for(int y = 0; y < m_pImage->GetHeight(); y++){
+			for(int x = 0; x < m_pImage->GetWidth(); x++){
+				gray = m_pImage->GetPixelGray(x, y);
+				if(gray > threshold) gray = 255;
+				else gray = 0;
+
+				tmp.SetPixelColor(x, y, RGB(gray, gray, gray));
+			}
+		}
+		m_pImage->Copy(tmp);
+	}
 	UpdateAllViews(NULL);
 }
