@@ -23,6 +23,8 @@ IMPLEMENT_DYNCREATE(CMyImageProcessingDoc, CDocument)
 
 BEGIN_MESSAGE_MAP(CMyImageProcessingDoc, CDocument)
 	ON_COMMAND(ID_FILE_OPEN, &CMyImageProcessingDoc::OnFileOpen)
+	ON_COMMAND(ID_IMG_GRAY, &CMyImageProcessingDoc::OnImgGray)
+	ON_COMMAND(ID_IMG_INV, &CMyImageProcessingDoc::OnImgInv)
 END_MESSAGE_MAP()
 
 
@@ -177,4 +179,42 @@ BOOL CMyImageProcessingDoc::OnSaveDocument(LPCTSTR lpszPathName)
 
 	//return CDocument::OnSaveDocument(lpszPathName);
 	return m_pImage->Save(lpszPathName, CXIMAGE_FORMAT_JPG);
+}
+
+
+void CMyImageProcessingDoc::OnImgGray()
+{
+	// TODO: 여기에 명령 처리기 코드를 추가합니다.
+	// TODO: 여기에 명령 처리기 코드를 추가합니다.
+	RGBQUAD color;
+	int gray;
+	for(int y = 0; y < m_pImage->GetHeight(); y++){
+		for(int x = 0; x < m_pImage->GetWidth(); x++){
+			color = m_pImage->GetPixelColor(x, y);
+			gray = (color.rgbRed + color.rgbGreen + color.rgbBlue) / 3;
+			m_pImage->SetPixelColor(x, y, RGB(gray, gray, gray)); 
+		}
+		UpdateAllViews(NULL);
+	}
+}
+
+
+
+void CMyImageProcessingDoc::OnImgInv()
+{
+	// TODO: 여기에 명령 처리기 코드를 추가합니다.
+	RGBQUAD color;
+	int r, g, b;
+	for(int y = 0; y < m_pImage->GetHeight(); y++){
+		for(int x = 0; x < m_pImage->GetWidth(); x++){
+			color = m_pImage->GetPixelColor(x, y);
+			r = 0xff ^ color.rgbRed;
+			g = 0xff ^ color.rgbGreen;
+			b = 0xff ^ color.rgbBlue;
+
+			m_pImage->SetPixelColor(x, y, RGB(r, g, b));
+		}
+	}
+
+	UpdateAllViews(NULL);
 }

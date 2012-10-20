@@ -1,23 +1,21 @@
-﻿빌드 시작: 2012-10-20 오후 4:51:25
+﻿빌드 시작: 2012-10-20 오후 5:26:01
      1>2 노드의 "H:\Repository\MyImageProcessing\MyImageProcessing\MyImageProcessing.vcxproj" 프로젝트(build 대상)입니다.
      1>InitializeBuildStatus:
          "AlwaysCreate"이(가) 지정되었기 때문에 "Debug\MyImageProcessing.unsuccessfulbuild"을(를) 만들고 있습니다.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I./xImage/include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\MyImageProcessing.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
-         stdafx.cpp
-     1>h:\repository\myimageprocessing\myimageprocessing\ximage\include\xiofile.h(24): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : 'fopen' 선언을 참조하십시오.
+         모든 출력이 최신 상태입니다.
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I./xImage/include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\MyImageProcessing.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ChildFrm.cpp MainFrm.cpp MyImageProcessing.cpp MyImageProcessingDoc.cpp MyImageProcessingView.cpp
          MyImageProcessingView.cpp
          MyImageProcessingDoc.cpp
      1>h:\repository\myimageprocessing\myimageprocessing\myimageprocessingdoc.cpp(144): warning C4129: '*' : 문자 이스케이프 시퀀스를 인식할 수 없습니다.
      1>h:\repository\myimageprocessing\myimageprocessing\myimageprocessingdoc.cpp(144): warning C4129: 'A' : 문자 이스케이프 시퀀스를 인식할 수 없습니다.
-         MyImageProcessing.cpp
+         코드를 생성하고 있습니다...
+         건너뛰고 있습니다... (관련된 변경 내용 없음)
          MainFrm.cpp
          ChildFrm.cpp
-         코드를 생성하고 있습니다...
+         MyImageProcessing.cpp
        ResourceCompile:
-         모든 출력이 최신 상태입니다.
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D _DEBUG /l"0x0412" /IDebug\ /nologo /fo"Debug\MyImageProcessing.res" MyImageProcessing.rc 
        ManifestResourceCompile:
          모든 출력이 최신 상태입니다.
        Link:
@@ -29,172 +27,6 @@
          Debug\MyImageProcessingDoc.obj
          Debug\MyImageProcessingView.obj
          Debug\stdafx.obj
-     1>cximage.lib(tif_xfile.obj) : warning LNK4099: 'vc60.pdb' PDB를 'cximage.lib(tif_xfile.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>cximage.lib(ximabmp.obj) : warning LNK4099: 'vc60.pdb' PDB를 'cximage.lib(ximabmp.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>cximage.lib(ximaenc.obj) : warning LNK4099: 'vc60.pdb' PDB를 'cximage.lib(ximaenc.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>cximage.lib(ximaexif.obj) : warning LNK4099: 'vc60.pdb' PDB를 'cximage.lib(ximaexif.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>cximage.lib(xImage.obj) : warning LNK4099: 'vc60.pdb' PDB를 'cximage.lib(xImage.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>cximage.lib(ximagif.obj) : warning LNK4099: 'vc60.pdb' PDB를 'cximage.lib(ximagif.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>cximage.lib(ximaico.obj) : warning LNK4099: 'vc60.pdb' PDB를 'cximage.lib(ximaico.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>cximage.lib(ximainfo.obj) : warning LNK4099: 'vc60.pdb' PDB를 'cximage.lib(ximainfo.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>cximage.lib(ximaint.obj) : warning LNK4099: 'vc60.pdb' PDB를 'cximage.lib(ximaint.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>cximage.lib(ximajas.obj) : warning LNK4099: 'vc60.pdb' PDB를 'cximage.lib(ximajas.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>cximage.lib(ximajpg.obj) : warning LNK4099: 'vc60.pdb' PDB를 'cximage.lib(ximajpg.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>cximage.lib(ximalpha.obj) : warning LNK4099: 'vc60.pdb' PDB를 'cximage.lib(ximalpha.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>cximage.lib(ximapal.obj) : warning LNK4099: 'vc60.pdb' PDB를 'cximage.lib(ximapal.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>cximage.lib(ximapcx.obj) : warning LNK4099: 'vc60.pdb' PDB를 'cximage.lib(ximapcx.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>cximage.lib(ximapng.obj) : warning LNK4099: 'vc60.pdb' PDB를 'cximage.lib(ximapng.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>cximage.lib(ximasel.obj) : warning LNK4099: 'vc60.pdb' PDB를 'cximage.lib(ximasel.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>cximage.lib(ximatga.obj) : warning LNK4099: 'vc60.pdb' PDB를 'cximage.lib(ximatga.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>cximage.lib(ximath.obj) : warning LNK4099: 'vc60.pdb' PDB를 'cximage.lib(ximath.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>cximage.lib(ximatif.obj) : warning LNK4099: 'vc60.pdb' PDB를 'cximage.lib(ximatif.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>cximage.lib(ximatran.obj) : warning LNK4099: 'vc60.pdb' PDB를 'cximage.lib(ximatran.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>cximage.lib(ximawbmp.obj) : warning LNK4099: 'vc60.pdb' PDB를 'cximage.lib(ximawbmp.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>cximage.lib(ximawmf.obj) : warning LNK4099: 'vc60.pdb' PDB를 'cximage.lib(ximawmf.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>cximage.lib(ximawnd.obj) : warning LNK4099: 'vc60.pdb' PDB를 'cximage.lib(ximawnd.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>cximage.lib(xmemfile.obj) : warning LNK4099: 'vc60.pdb' PDB를 'cximage.lib(xmemfile.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(bmp_cod.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(bmp_cod.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(bmp_dec.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(bmp_dec.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(bmp_enc.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(bmp_enc.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jas_cm.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jas_cm.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jas_debug.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jas_debug.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jas_icc.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jas_icc.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jas_iccdata.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jas_iccdata.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jas_image.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jas_image.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jas_init.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jas_init.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jas_malloc.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jas_malloc.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jas_seq.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jas_seq.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jas_stream.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jas_stream.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jas_string.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jas_string.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jas_tvp.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jas_tvp.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jas_version.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jas_version.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jp2_cod.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jp2_cod.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jp2_dec.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jp2_dec.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jp2_enc.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jp2_enc.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jpc_bs.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jpc_bs.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jpc_cs.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jpc_cs.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jpc_dec.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jpc_dec.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jpc_enc.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jpc_enc.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jpc_math.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jpc_math.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jpc_mct.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jpc_mct.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jpc_mqcod.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jpc_mqcod.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jpc_mqdec.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jpc_mqdec.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jpc_mqenc.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jpc_mqenc.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jpc_qmfb.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jpc_qmfb.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jpc_t1cod.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jpc_t1cod.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jpc_t1dec.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jpc_t1dec.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jpc_t1enc.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jpc_t1enc.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jpc_t2cod.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jpc_t2cod.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jpc_t2dec.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jpc_t2dec.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jpc_t2enc.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jpc_t2enc.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jpc_tagtree.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jpc_tagtree.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jpc_tsfb.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jpc_tsfb.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jpc_util.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jpc_util.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jpg_dummy.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jpg_dummy.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(jpg_val.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(jpg_val.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(mif_cod.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(mif_cod.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(pgx_dec.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(pgx_dec.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(pgx_enc.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(pgx_enc.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(pnm_cod.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(pnm_cod.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(pnm_dec.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(pnm_dec.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(pnm_enc.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(pnm_enc.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(ras_dec.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(ras_dec.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>jasper.lib(ras_enc.obj) : warning LNK4099: 'vc60.pdb' PDB를 'jasper.lib(ras_enc.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jcapimin.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jcapimin.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jcapistd.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jcapistd.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jccoefct.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jccoefct.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jccolor.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jccolor.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jcdctmgr.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jcdctmgr.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jchuff.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jchuff.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jcinit.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jcinit.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jcmainct.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jcmainct.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jcmarker.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jcmarker.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jcmaster.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jcmaster.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jcomapi.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jcomapi.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jcparam.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jcparam.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jcphuff.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jcphuff.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jcprepct.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jcprepct.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jcsample.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jcsample.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jdapimin.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jdapimin.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jdapistd.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jdapistd.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jdcoefct.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jdcoefct.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jdcolor.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jdcolor.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jddctmgr.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jddctmgr.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jdhuff.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jdhuff.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jdinput.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jdinput.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jdmainct.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jdmainct.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jdmarker.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jdmarker.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jdmaster.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jdmaster.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jdmerge.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jdmerge.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jdphuff.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jdphuff.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jdpostct.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jdpostct.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jdsample.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jdsample.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jerror.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jerror.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jfdctflt.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jfdctflt.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jfdctfst.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jfdctfst.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jfdctint.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jfdctint.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jidctflt.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jidctflt.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jidctfst.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jidctfst.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jidctint.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jidctint.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jidctred.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jidctred.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jmemmgr.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jmemmgr.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jmemnobs.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jmemnobs.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jquant1.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jquant1.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jquant2.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jquant2.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Jpeg.lib(Jutils.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Jpeg.lib(Jutils.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>png.lib(png.obj) : warning LNK4099: 'vc60.pdb' PDB를 'png.lib(png.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>png.lib(pngerror.obj) : warning LNK4099: 'vc60.pdb' PDB를 'png.lib(pngerror.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>png.lib(pngget.obj) : warning LNK4099: 'vc60.pdb' PDB를 'png.lib(pngget.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>png.lib(pngmem.obj) : warning LNK4099: 'vc60.pdb' PDB를 'png.lib(pngmem.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>png.lib(pngread.obj) : warning LNK4099: 'vc60.pdb' PDB를 'png.lib(pngread.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>png.lib(pngrio.obj) : warning LNK4099: 'vc60.pdb' PDB를 'png.lib(pngrio.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>png.lib(pngrtran.obj) : warning LNK4099: 'vc60.pdb' PDB를 'png.lib(pngrtran.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>png.lib(pngrutil.obj) : warning LNK4099: 'vc60.pdb' PDB를 'png.lib(pngrutil.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>png.lib(pngset.obj) : warning LNK4099: 'vc60.pdb' PDB를 'png.lib(pngset.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>png.lib(pngtrans.obj) : warning LNK4099: 'vc60.pdb' PDB를 'png.lib(pngtrans.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>png.lib(pngwio.obj) : warning LNK4099: 'vc60.pdb' PDB를 'png.lib(pngwio.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>png.lib(pngwrite.obj) : warning LNK4099: 'vc60.pdb' PDB를 'png.lib(pngwrite.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>png.lib(pngwtran.obj) : warning LNK4099: 'vc60.pdb' PDB를 'png.lib(pngwtran.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>png.lib(pngwutil.obj) : warning LNK4099: 'vc60.pdb' PDB를 'png.lib(pngwutil.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(fax3sm_winnt.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(fax3sm_winnt.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_aux.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_aux.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_close.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_close.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_codec.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_codec.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_compress.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_compress.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_dir.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_dir.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_dirinfo.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_dirinfo.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_dirread.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_dirread.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_dirwrite.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_dirwrite.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_dumpmode.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_dumpmode.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_error.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_error.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_fax3.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_fax3.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_flush.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_flush.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_getimage.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_getimage.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_jpeg.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_jpeg.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_luv.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_luv.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_lzw.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_lzw.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_next.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_next.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_ojpeg.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_ojpeg.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_open.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_open.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_packbits.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_packbits.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_predict.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_predict.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_read.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_read.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_strip.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_strip.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_swab.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_swab.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_thunder.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_thunder.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_tile.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_tile.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_warning.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_warning.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_write.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_write.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>Tiff.lib(tif_zip.obj) : warning LNK4099: 'vc60.pdb' PDB를 'Tiff.lib(tif_zip.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>zlib.lib(adler32.obj) : warning LNK4099: 'vc60.pdb' PDB를 'zlib.lib(adler32.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>zlib.lib(compress.obj) : warning LNK4099: 'vc60.pdb' PDB를 'zlib.lib(compress.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>zlib.lib(crc32.obj) : warning LNK4099: 'vc60.pdb' PDB를 'zlib.lib(crc32.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>zlib.lib(deflate.obj) : warning LNK4099: 'vc60.pdb' PDB를 'zlib.lib(deflate.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>zlib.lib(inffast.obj) : warning LNK4099: 'vc60.pdb' PDB를 'zlib.lib(inffast.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>zlib.lib(inflate.obj) : warning LNK4099: 'vc60.pdb' PDB를 'zlib.lib(inflate.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>zlib.lib(inftrees.obj) : warning LNK4099: 'vc60.pdb' PDB를 'zlib.lib(inftrees.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>zlib.lib(trees.obj) : warning LNK4099: 'vc60.pdb' PDB를 'zlib.lib(trees.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
-     1>zlib.lib(zutil.obj) : warning LNK4099: 'vc60.pdb' PDB를 'zlib.lib(zutil.obj)' 또는 'H:\Repository\MyImageProcessing\Debug\vc60.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
        Manifest:
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\MyImageProcessing.exe.embed.manifest" /manifest Debug\MyImageProcessing.exe.intermediate.manifest "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
          모든 출력이 최신 상태입니다.
@@ -208,4 +40,4 @@
 
 빌드했습니다.
 
-경과 시간: 00:00:09.95
+경과 시간: 00:00:01.28

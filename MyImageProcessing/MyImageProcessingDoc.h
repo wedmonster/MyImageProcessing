@@ -50,4 +50,6 @@ public:
 	virtual BOOL OnOpenDocument(LPCTSTR lpszPathName);
 	virtual void DeleteContents();
 	virtual BOOL OnSaveDocument(LPCTSTR lpszPathName);
+	afx_msg void OnImgGray();
+	afx_msg void OnImgInv();
 };
