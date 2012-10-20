@@ -46,7 +46,7 @@ BOOL CMyImageProcessingView::PreCreateWindow(CREATESTRUCT& cs)
 
 // CMyImageProcessingView 그리기
 
-void CMyImageProcessingView::OnDraw(CDC* /*pDC*/)
+void CMyImageProcessingView::OnDraw(CDC* pDC)
 {
 	CMyImageProcessingDoc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
@@ -54,6 +54,11 @@ void CMyImageProcessingView::OnDraw(CDC* /*pDC*/)
 		return;
 
 	// TODO: 여기에 원시 데이터에 대한 그리기 코드를 추가합니다.
+	
+	if (pDoc->m_pImage)
+		pDoc->m_pImage->Draw(pDC->GetSafeHdc(), CRect(0,0,(int)(pDoc->m_pImage->GetWidth()),(int)(pDoc->m_pImage->GetHeight())));
+
+
 }
 
 void CMyImageProcessingView::OnInitialUpdate()
@@ -62,6 +67,10 @@ void CMyImageProcessingView::OnInitialUpdate()
 
 	CSize sizeTotal;
 	// TODO: 이 뷰의 전체 크기를 계산합니다.
+	CMyImageProcessingDoc *pDoc = GetDocument();
+	if(pDoc->m_pImage)
+		sizeTotal = CSize(pDoc->m_pImage->GetWidth(), pDoc->m_pImage->GetHeight());
+
 	sizeTotal.cx = sizeTotal.cy = 100;
 	SetScrollSizes(MM_TEXT, sizeTotal);
 }

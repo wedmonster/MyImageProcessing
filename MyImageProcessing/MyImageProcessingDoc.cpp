@@ -22,6 +22,7 @@
 IMPLEMENT_DYNCREATE(CMyImageProcessingDoc, CDocument)
 
 BEGIN_MESSAGE_MAP(CMyImageProcessingDoc, CDocument)
+	ON_COMMAND(ID_FILE_OPEN, &CMyImageProcessingDoc::OnFileOpen)
 END_MESSAGE_MAP()
 
 
@@ -135,3 +136,45 @@ void CMyImageProcessingDoc::Dump(CDumpContext& dc) const
 
 
 // CMyImageProcessingDoc 명령
+
+
+void CMyImageProcessingDoc::OnFileOpen()
+{
+	// TODO: 여기에 명령 처리기 코드를 추가합니다.
+	char szFilter[]="Image files | \*.bmp;*.gif;*.jpg;*.jpeg;*.png;*.ico;*.tif;*.tiff;*.tga;*.pcx;\All Files(*.*)|*.*||";
+	CFileDialog fileDlg(TRUE, NULL, NULL, OFN_HIDEREADONLY, szFilter);
+	if(IDOK == fileDlg.DoModal())
+		OnOpenDocument(fileDlg.GetPathName());
+
+}
+
+
+BOOL CMyImageProcessingDoc::OnOpenDocument(LPCTSTR lpszPathName)
+{
+	if (!CDocument::OnOpenDocument(lpszPathName))
+		return FALSE;
+
+	// TODO:  여기에 특수화된 작성 코드를 추가합니다.
+	m_pImage = new CxImage;
+	m_pImage->Load(lpszPathName);
+
+	return TRUE;
+}
+
+
+void CMyImageProcessingDoc::DeleteContents()
+{
+	// TODO: 여기에 특수화된 코드를 추가 및/또는 기본 클래스를 호출합니다.
+	if(m_pImage) delete m_pImage;
+
+	CDocument::DeleteContents();
+}
+
+
+BOOL CMyImageProcessingDoc::OnSaveDocument(LPCTSTR lpszPathName)
+{
+	// TODO: 여기에 특수화된 코드를 추가 및/또는 기본 클래스를 호출합니다.
+
+	//return CDocument::OnSaveDocument(lpszPathName);
+	return m_pImage->Save(lpszPathName, CXIMAGE_FORMAT_JPG);
+}
