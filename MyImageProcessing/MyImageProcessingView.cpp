@@ -22,6 +22,7 @@
 IMPLEMENT_DYNCREATE(CMyImageProcessingView, CScrollView)
 
 BEGIN_MESSAGE_MAP(CMyImageProcessingView, CScrollView)
+	ON_WM_ERASEBKGND()
 END_MESSAGE_MAP()
 
 // CMyImageProcessingView 생성/소멸
@@ -99,3 +100,13 @@ CMyImageProcessingDoc* CMyImageProcessingView::GetDocument() const // 디버그되지
 
 
 // CMyImageProcessingView 메시지 처리기
+
+
+BOOL CMyImageProcessingView::OnEraseBkgnd(CDC* pDC)
+{
+	// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
+	CBrush br;
+	br.CreateHatchBrush(HS_DIAGCROSS, RGB(200, 200, 200));
+	FillOutsideRect(pDC, &br);
+	return true;
+}
