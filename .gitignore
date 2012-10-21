@@ -1,6 +1,6 @@
-/Debug
-/ipch
+/Debug/*
+/ipch/*
 MyImageProcessing.opensdf
 MyImageProcessing.sdf
-/MyImageProcessing/Debug
-/MyImageProcessing/xImage
+/MyImageProcessing/Debug/*
+/MyImageProcessing/xImage/*

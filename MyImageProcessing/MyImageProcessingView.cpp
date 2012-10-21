@@ -74,7 +74,8 @@ void CMyImageProcessingView::OnInitialUpdate()
 
 	//sizeTotal.cx = sizeTotal.cy = 100;
 	SetScrollSizes(MM_TEXT, sizeTotal);
-	ResizeParentToFit();
+	
+	ResizeParentToFit(false);
 }
 
 

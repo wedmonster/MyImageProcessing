@@ -54,6 +54,12 @@
     <ClInclude Include="BinthSet.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="SclDlg.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="function.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MyImageProcessing.cpp">
@@ -75,6 +81,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="BinthSet.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="SclDlg.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

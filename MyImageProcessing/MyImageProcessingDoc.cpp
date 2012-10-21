@@ -10,7 +10,12 @@
 #endif
 
 #include "MyImageProcessingDoc.h"
+#include "MyImageProcessingView.h"
 #include "BinthSet.h"
+#include "SclDlg.h"
+#include "function.h"
+#include "MainFrm.h"
+#include "ChildFrm.h"
 
 #include <propkey.h>
 
@@ -27,6 +32,7 @@ BEGIN_MESSAGE_MAP(CMyImageProcessingDoc, CDocument)
 	ON_COMMAND(ID_IMG_GRAY, &CMyImageProcessingDoc::OnImgGray)
 	ON_COMMAND(ID_IMG_INV, &CMyImageProcessingDoc::OnImgInv)
 	ON_COMMAND(ID_IMG_BIN, &CMyImageProcessingDoc::OnImgBin)
+	ON_COMMAND(ID_IMG_SCL, &CMyImageProcessingDoc::OnImgScl)
 END_MESSAGE_MAP()
 
 
@@ -249,4 +255,65 @@ void CMyImageProcessingDoc::OnImgBin()
 		m_pImage->Copy(tmp);
 	}
 	UpdateAllViews(NULL);
+}
+
+
+void CMyImageProcessingDoc::OnImgScl()
+{
+	// TODO: 여기에 명령 처리기 코드를 추가합니다.
+	//int Cx = 10;
+	//int Cy = 10;
+
+	//CxImage tmp;
+	//tmp.Create(Cx*m_pImage->GetWidth(), Cy*m_pImage->GetHeight(), m_pImage->GetBpp());
+	////tmp.Copy(*m_pImage);
+	//for(int w = 0; w < m_pImage->GetHeight(); w++){
+	//	for(int v = 0; v < m_pImage->GetWidth(); v++){
+	//		int x = Cx*v;
+	//		int y = Cy*w;
+	//		tmp.SetPixelColor(x, y, m_pImage->GetPixelColor(v, w));
+	//	}
+	//}
+	//m_pImage->Copy(tmp);
+	//UpdateAllViews(NULL);
+	CSclDlg dlg;
+
+	if(dlg.DoModal() == IDOK){
+		int type = dlg.m_nType;
+		double Cx = 0.0;
+		double Cy = 0.0;
+		RGBQUAD rgb;
+		if(type == 1){
+			//zoom
+			Cx = (double)dlg.m_Cx;
+			Cy = (double)dlg.m_Cy;
+		}else{
+			//shrink
+			Cx = 1.0 / (double) dlg.m_Cx;
+			Cy = 1.0 / (double) dlg.m_Cy;
+		}
+
+		CxImage tmp;
+		tmp.Create(Cx*m_pImage->GetWidth(), Cy*m_pImage->GetHeight(), m_pImage->GetBpp());
+		MATRIX3D inv = ScaleT_Matrix(Cx, Cy);
+		for(int y = 0; y < tmp.GetHeight(); y++) {
+			for(int x = 0; x < tmp.GetWidth(); x++) {
+				tmp.SetPixelColor( x, y, BilinearInterpolation( ScaleT( _POINT(x, y), inv ), *m_pImage ) );
+				//tmp.SetPixelColor( x, y, NoInterpolation( ScaleT( _POINT(x, y), inv ), *m_pImage ) );
+				//tmp.SetPixelColor( x, y, NearestNeihborInterpolation( ScaleT( _POINT(x, y), inv ), *m_pImage ) );
+			}
+		}
+		
+		m_pImage->Copy(tmp);
+		UpdateAllViews(NULL);
+
+		CMainFrame *pFrame = (CMainFrame*) AfxGetMainWnd();
+		CChildFrame *pChild = (CChildFrame *)pFrame->GetActiveFrame();		
+		CMyImageProcessingView *pView = (CMyImageProcessingView*) pChild->GetActiveView();
+		pView->SendMessage(WM_INITIALUPDATE, 0, 0);
+
+		
+
+	}
+
 }

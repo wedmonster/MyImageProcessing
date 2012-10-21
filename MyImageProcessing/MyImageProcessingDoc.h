@@ -53,4 +53,5 @@ public:
 	afx_msg void OnImgGray();
 	afx_msg void OnImgInv();
 	afx_msg void OnImgBin();
+	afx_msg void OnImgScl();
 };

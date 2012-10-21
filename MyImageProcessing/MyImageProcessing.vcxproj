@@ -106,11 +106,13 @@
   <ItemGroup>
     <ClInclude Include="BinthSet.h" />
     <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="function.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="MyImageProcessing.h" />
     <ClInclude Include="MyImageProcessingDoc.h" />
     <ClInclude Include="MyImageProcessingView.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="SclDlg.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -121,6 +123,7 @@
     <ClCompile Include="MyImageProcessing.cpp" />
     <ClCompile Include="MyImageProcessingDoc.cpp" />
     <ClCompile Include="MyImageProcessingView.cpp" />
+    <ClCompile Include="SclDlg.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
