@@ -17,7 +17,7 @@
 #include "MainFrm.h"
 #include "ChildFrm.h"
 #include "HistDlg.h"
-
+#include "HBDlg.h"
 #include <propkey.h>
 
 #ifdef _DEBUG
@@ -37,6 +37,8 @@ BEGIN_MESSAGE_MAP(CMyImageProcessingDoc, CDocument)
 	ON_COMMAND(ID_HIST, &CMyImageProcessingDoc::OnHist)
 	ON_COMMAND(ID_HIST_EQ, &CMyImageProcessingDoc::OnHistEq)
 	ON_COMMAND(ID_LAPLACION, &CMyImageProcessingDoc::OnLaplacion)
+	ON_COMMAND(ID_HIGH_BOOST, &CMyImageProcessingDoc::OnHighBoost)
+	ON_COMMAND(ID_SOBEL, &CMyImageProcessingDoc::OnSobel)
 END_MESSAGE_MAP()
 
 
@@ -413,9 +415,62 @@ void CMyImageProcessingDoc::OnLaplacion()
 		for(int x = 1; x < m_pImage->GetWidth()-1; x++){
 			int red = calcMask(mask, x, y, R);
 			int green = calcMask(mask, x, y, G);
-			int blue = calcMask(mask, x, y, B);
-			
-			
+			int blue = calcMask(mask, x, y, B);		
+
+			tmp.SetPixelColor(x, y, RGB(red, green, blue));
+		}
+	}
+	m_pImage->Copy(tmp);
+	UpdateAllViews(NULL);
+}
+
+
+void CMyImageProcessingDoc::OnHighBoost()
+{
+	// TODO: 여기에 명령 처리기 코드를 추가합니다.
+	CHBDlg dlg;
+	if(dlg.DoModal() == IDOK)
+	{
+		double m_A = dlg.m_A;
+		double mask[3][3] = {-1, -1, -1,
+						 -1, 8, -1,
+						 -1, -1, -1};
+		mask[2][2] += m_A;
+
+		CxImage tmp;
+		tmp.Copy(*m_pImage);
+		for(int y = 1; y < m_pImage->GetHeight()-1; y++){
+			for(int x = 1; x < m_pImage->GetWidth()-1; x++){
+				int red = calcMask(mask, x, y, R);
+				int green = calcMask(mask, x, y, G);
+				int blue = calcMask(mask, x, y, B);		
+
+				tmp.SetPixelColor(x, y, RGB(red, green, blue));
+			}
+		}
+		m_pImage->Copy(tmp);
+		UpdateAllViews(NULL);
+	}
+}
+
+
+void CMyImageProcessingDoc::OnSobel()
+{
+	// TODO: 여기에 명령 처리기 코드를 추가합니다.
+	double mask_x[3][3] = {-1, -2, -1,
+							0,  0,  0,
+						    1,  2,  1};
+	double mask_y[3][3] = {-1,  0, 1,
+						   -2,  0, 2,
+						   -1,  0, 1};
+
+	CxImage tmp;
+	tmp.Copy(*m_pImage);
+	for(int y = 1; y < m_pImage->GetHeight()-1; y++){
+		for(int x = 1; x < m_pImage->GetWidth()-1; x++){
+			int red = abs(calcMask(mask_x, x, y, R)) + abs(calcMask(mask_y, x, y, R));
+			int green = abs(calcMask(mask_x, x, y, G)) + abs(calcMask(mask_y, x, y, G));
+			int blue = abs(calcMask(mask_x, x, y, B)) + abs(calcMask(mask_y, x, y, B));
 
 			tmp.SetPixelColor(x, y, RGB(red, green, blue));
 		}

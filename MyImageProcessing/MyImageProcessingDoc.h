@@ -58,4 +58,6 @@ public:
 	afx_msg void OnHistEq();
 	afx_msg void OnLaplacion();
 	int calcMask(double mask[][3], int x, int y, int k);
+	afx_msg void OnHighBoost();
+	afx_msg void OnSobel();
 };
