@@ -60,4 +60,8 @@ public:
 	int calcMask(double mask[][3], int x, int y, int k);
 	afx_msg void OnHighBoost();
 	afx_msg void OnSobel();
+	afx_msg void OnSmLin();
+	afx_msg void OnOrderMaxfilter();
+	afx_msg void OnOrderMedianfilter();
+	afx_msg void OnOrderMinfilter();
 };

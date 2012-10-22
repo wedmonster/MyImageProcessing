@@ -39,6 +39,10 @@ BEGIN_MESSAGE_MAP(CMyImageProcessingDoc, CDocument)
 	ON_COMMAND(ID_LAPLACION, &CMyImageProcessingDoc::OnLaplacion)
 	ON_COMMAND(ID_HIGH_BOOST, &CMyImageProcessingDoc::OnHighBoost)
 	ON_COMMAND(ID_SOBEL, &CMyImageProcessingDoc::OnSobel)
+	ON_COMMAND(ID_SM_LIN, &CMyImageProcessingDoc::OnSmLin)
+	ON_COMMAND(ID_ORDER_MAXFILTER, &CMyImageProcessingDoc::OnOrderMaxfilter)
+	ON_COMMAND(ID_ORDER_MEDIANFILTER, &CMyImageProcessingDoc::OnOrderMedianfilter)
+	ON_COMMAND(ID_ORDER_MINFILTER, &CMyImageProcessingDoc::OnOrderMinfilter)
 END_MESSAGE_MAP()
 
 
@@ -475,6 +479,55 @@ void CMyImageProcessingDoc::OnSobel()
 			tmp.SetPixelColor(x, y, RGB(red, green, blue));
 		}
 	}
+	m_pImage->Copy(tmp);
+	UpdateAllViews(NULL);
+}
+
+
+void CMyImageProcessingDoc::OnSmLin()
+{
+	// TODO: 여기에 명령 처리기 코드를 추가합니다.
+	double mask[3][3] = {1.0/16, 2.0/16, 1.0/16,
+						 2.0/16, 4.0/16, 2.0/16,
+						 1.0/16, 2.0/16, 1.0/16};
+	CxImage tmp;
+	tmp.Copy(*m_pImage);
+	for(int y = 1; y < m_pImage->GetHeight()-1; y++){
+		for(int x = 1; x < m_pImage->GetWidth()-1; x++){
+			int red = calcMask(mask, x, y, R);
+			int green = calcMask(mask, x, y, G);
+			int blue = calcMask(mask, x, y, B);		
+
+			tmp.SetPixelColor(x, y, RGB(red, green, blue));
+		}
+	}
+	m_pImage->Copy(tmp);
+	UpdateAllViews(NULL);
+}
+
+
+void CMyImageProcessingDoc::OnOrderMaxfilter()
+{
+	// TODO: 여기에 명령 처리기 코드를 추가합니다.
+	CxImage tmp = MaxFilter(m_pImage);
+	m_pImage->Copy(tmp);
+	UpdateAllViews(NULL);
+}
+
+
+void CMyImageProcessingDoc::OnOrderMedianfilter()
+{
+	// TODO: 여기에 명령 처리기 코드를 추가합니다.
+	CxImage tmp = MedianFilter(m_pImage);
+	m_pImage->Copy(tmp);
+	UpdateAllViews(NULL);
+}
+
+
+void CMyImageProcessingDoc::OnOrderMinfilter()
+{
+	// TODO: 여기에 명령 처리기 코드를 추가합니다.
+	CxImage tmp = MinFilter(m_pImage);
 	m_pImage->Copy(tmp);
 	UpdateAllViews(NULL);
 }
