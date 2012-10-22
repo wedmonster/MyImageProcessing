@@ -1,39 +1,18 @@
-﻿빌드 시작: 2012-10-22 오후 4:02:03
+﻿빌드 시작: 2012-10-22 오후 5:05:15
      1>2 노드의 "H:\Repository\MyImageProcessing\MyImageProcessing\MyImageProcessing.vcxproj" 프로젝트(build 대상)입니다.
      1>InitializeBuildStatus:
          "AlwaysCreate"이(가) 지정되었기 때문에 "Debug\MyImageProcessing.unsuccessfulbuild"을(를) 만들고 있습니다.
        ClCompile:
          모든 출력이 최신 상태입니다.
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I./xImage/include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\MyImageProcessing.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt MyImageProcessingDoc.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I./xImage/include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\MyImageProcessing.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt HistDlg.cpp MyImageProcessingDoc.cpp
+         HistDlg.cpp
+     1>h:\repository\myimageprocessing\myimageprocessing\histdlg.cpp(44): warning C4244: '인수' : 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+     1>h:\repository\myimageprocessing\myimageprocessing\histdlg.cpp(45): warning C4018: '<' : signed 또는 unsigned가 일치하지 않습니다.
+     1>h:\repository\myimageprocessing\myimageprocessing\histdlg.cpp(46): warning C4018: '<' : signed 또는 unsigned가 일치하지 않습니다.
+     1>h:\repository\myimageprocessing\myimageprocessing\histdlg.cpp(77): warning C4244: '인수' : 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+         코드를 생성하고 있습니다...
+         건너뛰고 있습니다... (관련된 변경 내용 없음)
          MyImageProcessingDoc.cpp
-     1>h:\repository\myimageprocessing\myimageprocessing\function.h(185): warning C4018: '>=' : signed 또는 unsigned가 일치하지 않습니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\function.h(185): warning C4018: '>=' : signed 또는 unsigned가 일치하지 않습니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\function.h(207): warning C4244: 'return' : 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\function.h(221): warning C4244: '초기화 중' : 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\function.h(222): warning C4244: '초기화 중' : 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\function.h(225): warning C4018: '>=' : signed 또는 unsigned가 일치하지 않습니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\function.h(225): warning C4018: '>=' : signed 또는 unsigned가 일치하지 않습니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\function.h(226): warning C4018: '>=' : signed 또는 unsigned가 일치하지 않습니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\function.h(226): warning C4018: '>=' : signed 또는 unsigned가 일치하지 않습니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\myimageprocessingdoc.cpp(154): warning C4129: '*' : 문자 이스케이프 시퀀스를 인식할 수 없습니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\myimageprocessingdoc.cpp(154): warning C4129: 'A' : 문자 이스케이프 시퀀스를 인식할 수 없습니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\myimageprocessingdoc.cpp(199): warning C4018: '<' : signed 또는 unsigned가 일치하지 않습니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\myimageprocessingdoc.cpp(200): warning C4018: '<' : signed 또는 unsigned가 일치하지 않습니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\myimageprocessingdoc.cpp(216): warning C4018: '<' : signed 또는 unsigned가 일치하지 않습니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\myimageprocessingdoc.cpp(217): warning C4018: '<' : signed 또는 unsigned가 일치하지 않습니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\myimageprocessingdoc.cpp(246): warning C4018: '<' : signed 또는 unsigned가 일치하지 않습니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\myimageprocessingdoc.cpp(247): warning C4018: '<' : signed 또는 unsigned가 일치하지 않습니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\myimageprocessingdoc.cpp(234): warning C4101: 'y' :참조되지 않은 지역 변수입니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\myimageprocessingdoc.cpp(234): warning C4101: 'x' :참조되지 않은 지역 변수입니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\myimageprocessingdoc.cpp(297): warning C4244: '인수' : 'double'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\myimageprocessingdoc.cpp(297): warning C4244: '인수' : 'double'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\myimageprocessingdoc.cpp(298): warning C4244: '인수' : 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\myimageprocessingdoc.cpp(298): warning C4244: '인수' : 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\myimageprocessingdoc.cpp(299): warning C4018: '<' : signed 또는 unsigned가 일치하지 않습니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\myimageprocessingdoc.cpp(300): warning C4018: '<' : signed 또는 unsigned가 일치하지 않습니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\myimageprocessingdoc.cpp(285): warning C4101: 'rgb' :참조되지 않은 지역 변수입니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\function.h(96): warning C4715: 'MATRIX3D::getDet' : 모든 제어 경로에서 값을 반환하지는 않습니다.
-     1>h:\repository\myimageprocessing\myimageprocessing\function.h(200): warning C4715: 'GetChannelColor' : 모든 제어 경로에서 값을 반환하지는 않습니다.
        ResourceCompile:
          모든 출력이 최신 상태입니다.
        ManifestResourceCompile:
@@ -43,6 +22,7 @@
          Debug\MyImageProcessing.exe.embed.manifest.res
          Debug\BinthSet.obj
          Debug\ChildFrm.obj
+         Debug\HistDlg.obj
          Debug\MainFrm.obj
          Debug\MyImageProcessing.obj
          Debug\MyImageProcessingDoc.obj
@@ -62,4 +42,4 @@
 
 빌드했습니다.
 
-경과 시간: 00:00:01.54
+경과 시간: 00:00:01.25

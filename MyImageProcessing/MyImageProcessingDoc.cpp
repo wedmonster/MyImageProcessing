@@ -16,6 +16,7 @@
 #include "function.h"
 #include "MainFrm.h"
 #include "ChildFrm.h"
+#include "HistDlg.h"
 
 #include <propkey.h>
 
@@ -33,6 +34,7 @@ BEGIN_MESSAGE_MAP(CMyImageProcessingDoc, CDocument)
 	ON_COMMAND(ID_IMG_INV, &CMyImageProcessingDoc::OnImgInv)
 	ON_COMMAND(ID_IMG_BIN, &CMyImageProcessingDoc::OnImgBin)
 	ON_COMMAND(ID_IMG_SCL, &CMyImageProcessingDoc::OnImgScl)
+	ON_COMMAND(ID_HIST, &CMyImageProcessingDoc::OnHist)
 END_MESSAGE_MAP()
 
 
@@ -316,4 +318,16 @@ void CMyImageProcessingDoc::OnImgScl()
 
 	}
 
+}
+
+
+void CMyImageProcessingDoc::OnHist()
+{
+	// TODO: 여기에 명령 처리기 코드를 추가합니다.
+	CHistDlg dlg;
+	dlg.SetImage(m_pImage);
+	if(dlg.DoModal() == IDOK)
+	{
+
+	}
 }

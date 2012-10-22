@@ -107,6 +107,7 @@
     <ClInclude Include="BinthSet.h" />
     <ClInclude Include="ChildFrm.h" />
     <ClInclude Include="function.h" />
+    <ClInclude Include="HistDlg.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="MyImageProcessing.h" />
     <ClInclude Include="MyImageProcessingDoc.h" />
@@ -119,6 +120,7 @@
   <ItemGroup>
     <ClCompile Include="BinthSet.cpp" />
     <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="HistDlg.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="MyImageProcessing.cpp" />
     <ClCompile Include="MyImageProcessingDoc.cpp" />
