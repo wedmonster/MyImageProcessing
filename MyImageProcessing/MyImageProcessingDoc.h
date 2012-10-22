@@ -56,4 +56,6 @@ public:
 	afx_msg void OnImgScl();
 	afx_msg void OnHist();
 	afx_msg void OnHistEq();
+	afx_msg void OnLaplacion();
+	int calcMask(double mask[][3], int x, int y, int k);
 };

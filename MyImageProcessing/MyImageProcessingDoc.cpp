@@ -36,6 +36,7 @@ BEGIN_MESSAGE_MAP(CMyImageProcessingDoc, CDocument)
 	ON_COMMAND(ID_IMG_SCL, &CMyImageProcessingDoc::OnImgScl)
 	ON_COMMAND(ID_HIST, &CMyImageProcessingDoc::OnHist)
 	ON_COMMAND(ID_HIST_EQ, &CMyImageProcessingDoc::OnHistEq)
+	ON_COMMAND(ID_LAPLACION, &CMyImageProcessingDoc::OnLaplacion)
 END_MESSAGE_MAP()
 
 
@@ -375,6 +376,48 @@ void CMyImageProcessingDoc::OnHistEq()
 			int green = m_pImage->GetPixelColor(x, y).rgbGreen;
 			int blue = m_pImage->GetPixelColor(x, y).rgbBlue;
 			tmp.SetPixelColor(x, y, RGB(s[red][R], s[green][G], s[blue][B]));
+		}
+	}
+	m_pImage->Copy(tmp);
+	UpdateAllViews(NULL);
+}
+
+int CMyImageProcessingDoc::calcMask(double mask[][3], int x, int y, int k){
+	double sum = 0.0;
+	for(int i = 0; i < 3; i++){
+		for(int j = 0; j < 3; j++){
+			if(k == R)
+				sum += (mask[i][j] * m_pImage->GetPixelColor(x-1+i, y-1+j).rgbRed);
+			else if(k == G)
+				sum += (mask[i][j] * m_pImage->GetPixelColor(x-1+i, y-1+j).rgbGreen);
+			else if(k == B)
+				sum += (mask[i][j] * m_pImage->GetPixelColor(x-1+i, y-1+j).rgbBlue);
+		}
+	}
+	if(sum > 255.0) return 255;
+	else if(sum < 0) return 0;
+	
+	return (int) sum;
+}
+
+
+void CMyImageProcessingDoc::OnLaplacion()
+{
+	// TODO: 여기에 명령 처리기 코드를 추가합니다.
+	double mask[3][3] = {-1, -1, -1,
+						 -1, 9, -1,
+						 -1, -1, -1};
+	CxImage tmp;
+	tmp.Copy(*m_pImage);
+	for(int y = 1; y < m_pImage->GetHeight()-1; y++){
+		for(int x = 1; x < m_pImage->GetWidth()-1; x++){
+			int red = calcMask(mask, x, y, R);
+			int green = calcMask(mask, x, y, G);
+			int blue = calcMask(mask, x, y, B);
+			
+			
+
+			tmp.SetPixelColor(x, y, RGB(red, green, blue));
 		}
 	}
 	m_pImage->Copy(tmp);
