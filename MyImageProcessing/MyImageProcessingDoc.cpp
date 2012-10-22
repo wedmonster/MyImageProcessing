@@ -35,6 +35,7 @@ BEGIN_MESSAGE_MAP(CMyImageProcessingDoc, CDocument)
 	ON_COMMAND(ID_IMG_BIN, &CMyImageProcessingDoc::OnImgBin)
 	ON_COMMAND(ID_IMG_SCL, &CMyImageProcessingDoc::OnImgScl)
 	ON_COMMAND(ID_HIST, &CMyImageProcessingDoc::OnHist)
+	ON_COMMAND(ID_HIST_EQ, &CMyImageProcessingDoc::OnHistEq)
 END_MESSAGE_MAP()
 
 
@@ -330,4 +331,52 @@ void CMyImageProcessingDoc::OnHist()
 	{
 
 	}
+}
+
+
+void CMyImageProcessingDoc::OnHistEq()
+{
+	// TODO: 여기에 명령 처리기 코드를 추가합니다.
+	int cdf[256][3] = {0, };
+	int n[256][3] = {0,};
+	int s[256][3] = {0, };	
+	
+	for(int y = 0; y < m_pImage->GetHeight(); y++){
+		for(int x = 0; x < m_pImage->GetWidth(); x++){
+			n[ m_pImage->GetPixelColor(x, y).rgbRed ][R]++;		
+			n[ m_pImage->GetPixelColor(x, y).rgbGreen ][G]++;
+			n[ m_pImage->GetPixelColor(x, y).rgbBlue ][B]++;
+		}
+	}
+	cdf[0][R] = n[0][R];
+	cdf[0][G] = n[0][G];
+	cdf[0][B] = n[0][B];
+
+	for(int i = 1; i < 256; i++){
+		cdf[i][R] = cdf[i-1][R] + n[i][R];
+		cdf[i][G] = cdf[i-1][G] + n[i][G];
+		cdf[i][B] = cdf[i-1][B] + n[i][B];
+	}
+
+	double MN = m_pImage->GetWidth() * m_pImage->GetHeight();
+	int L = 256;
+
+	for(int i = 0; i < 256; i++){
+		s[i][R] = ROUND((double)(L - 1)/MN*cdf[i][R]);
+		s[i][G] = ROUND((double)(L - 1)/MN*cdf[i][G]);
+		s[i][B] = ROUND((double)(L - 1)/MN*cdf[i][B]);
+	}
+
+	CxImage tmp;
+	tmp.Copy(*m_pImage);
+	for(int y = 0; y < tmp.GetHeight(); y++){
+		for(int x = 0; x < tmp.GetWidth(); x++){
+			int red = m_pImage->GetPixelColor(x, y).rgbRed;
+			int green = m_pImage->GetPixelColor(x, y).rgbGreen;
+			int blue = m_pImage->GetPixelColor(x, y).rgbBlue;
+			tmp.SetPixelColor(x, y, RGB(s[red][R], s[green][G], s[blue][B]));
+		}
+	}
+	m_pImage->Copy(tmp);
+	UpdateAllViews(NULL);
 }

@@ -55,4 +55,5 @@ public:
 	afx_msg void OnImgBin();
 	afx_msg void OnImgScl();
 	afx_msg void OnHist();
+	afx_msg void OnHistEq();
 };
