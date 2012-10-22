@@ -11,6 +11,8 @@ using namespace std;
 #define B 2
 #define EPS 1e-6
 
+
+
 typedef struct _POINT{
 	double x;
 	double y;
@@ -140,6 +142,15 @@ private:
 		}else return 0.0;
 	}
 };
+RGBQUAD WHITE()
+{
+	RGBQUAD white;
+	white.rgbBlue = 255;
+	white.rgbGreen = 255;
+	white.rgbRed = 255;
+	return white;
+}
+
 _POINT AffineTransform(_POINT& input, MATRIX3D& T){
 	//T must be inversed.
 	double v = input.x*T.get(0, 0) + input.y*T.get(1, 0) + 1*T.get(2, 0);
@@ -171,7 +182,9 @@ RGBQUAD NearestNeihborInterpolation(_POINT& input, CxImage& img)
 {
 	int v = ROUND(input.x);
 	int w = ROUND(input.y);
-	return img.GetPixelColor(v, w);
+	if(v < 0 || v >= img.GetWidth() || w < 0 || w >= img.GetHeight())
+		return WHITE();
+	else return img.GetPixelColor(v, w);
 }
 
 int GetChannelColor(int x, int y, CxImage& img, int channel)
@@ -209,11 +222,14 @@ RGBQUAD BilinearInterpolation(_POINT& input, CxImage& img)
 	int k = floor(input.y);
 	double a = input.x - l;
 	double b = input.y - k;
+	if(l < 0 || l >= img.GetWidth() || k < 0 || k >= img.GetHeight() ||
+		l+1 < 0 || l + 1 >= img.GetWidth() || k + 1 < 0 || k + 1 >= img.GetHeight())
+		return WHITE();
 	
 	int red = CalcBilinear(l, k, a, b, img, R);
 	int green = CalcBilinear(l, k, a, b, img, G);
 	int blue = CalcBilinear(l, k, a, b, img, B);
-	
+		
 	return SetRGB(red, green, blue);
 }
 
