@@ -1,0 +1,125 @@
+\documentclass{book}
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage{makeidx}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{ifthen}
+\usepackage[table]{xcolor}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[pdftex,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\else
+\usepackage[ps2pdf,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\usepackage{pspicture}
+\fi
+\usepackage[utf8]{inputenc}
+\usepackage{hfont}
+
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{sectsty}
+\usepackage{amssymb}
+\usepackage[titles]{tocloft}
+\usepackage{doxygen}
+\lstset{language=C++,inputencoding=utf8,basicstyle=\footnotesize,breaklines=true,breakatwhitespace=true,tabsize=4,numbers=left }
+\makeindex
+\setcounter{tocdepth}{3}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\familydefault}{\sfdefault}
+\hfuzz=15pt
+\setlength{\emergencystretch}{15pt}
+\hbadness=750
+\tolerance=750
+\begin{document}
+\hypersetup{pageanchor=false,citecolor=blue}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}
+{\Large My\-Image\-Processing \\[1ex]\large 1.\-0.\-0 }\\
+\vspace*{1cm}
+{\large 다음에 의해 생성됨 \-:  Doxygen 1.8.2}\\
+\vspace*{0.5cm}
+{\small 일 11월 11 2012 01:23:01}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true,citecolor=blue}
+\chapter{My\-Image}
+\label{index}\hypertarget{index}{}\input{index}
+\chapter{계통도 색인}
+\input{hierarchy}
+\chapter{클래스 색인}
+\input{annotated}
+\chapter{파일 색인}
+\input{files}
+\chapter{클래스 문서화}
+\input{class___p_o_i_n_t}
+\input{class_c_about_dlg}
+\input{class_c_binth_set}
+\input{class_c_child_frame}
+\input{class_c_h_b_dlg}
+\input{class_c_hist_dlg}
+\input{class_c_main_frame}
+\input{class_c_my_image_processing_app}
+\input{class_c_my_image_processing_doc}
+\input{class_c_my_image_processing_view}
+\input{class_c_pow_dlg}
+\input{class_c_scl_dlg}
+\input{class_m_a_t_r_i_x2_d}
+\input{class_m_a_t_r_i_x3_d}
+\input{class_my_image}
+\chapter{파일 문서화}
+\input{_binth_set_8cpp}
+\input{_binth_set_8h}
+\input{_child_frm_8cpp}
+\input{_child_frm_8h}
+\input{constant_8h}
+\input{function_8cpp}
+\input{function_8h}
+\input{_h_b_dlg_8cpp}
+\input{_h_b_dlg_8h}
+\input{_hist_dlg_8cpp}
+\input{_hist_dlg_8h}
+\input{_main_frm_8cpp}
+\input{_main_frm_8h}
+\input{matrix_8h}
+\input{_my_image_8cpp}
+\input{_my_image_8h}
+\input{_my_image_processing_8cpp}
+\input{_my_image_processing_8h}
+\input{_my_image_processing_doc_8cpp}
+\input{_my_image_processing_doc_8h}
+\input{_my_image_processing_view_8cpp}
+\input{_my_image_processing_view_8h}
+\input{_pow_dlg_8cpp}
+\input{_pow_dlg_8h}
+\input{resource_8h}
+\input{_scl_dlg_8cpp}
+\input{_scl_dlg_8h}
+\input{stdafx_8cpp}
+\input{stdafx_8h}
+\input{targetver_8h}
+\addcontentsline{toc}{part}{색인}
+\printindex
+\end{document}

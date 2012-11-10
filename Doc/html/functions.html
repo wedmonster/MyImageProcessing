@@ -1,0 +1,601 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>MyImageProcessing: 클래스 멤버</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">MyImageProcessing
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.2 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>메인&#160;페이지</span></a></li>
+      <li class="current"><a href="annotated.html"><span>클래스</span></a></li>
+      <li><a href="files.html"><span>파일들</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="검색" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>클래스&#160;목록</span></a></li>
+      <li><a href="classes.html"><span>클래스&#160;색인</span></a></li>
+      <li><a href="hierarchy.html"><span>클래스&#160;계통도</span></a></li>
+      <li class="current"><a href="functions.html"><span>클래스&#160;멤버</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow3" class="tabs2">
+    <ul class="tablist">
+      <li class="current"><a href="functions.html"><span>모두</span></a></li>
+      <li><a href="functions_func.html"><span>함수</span></a></li>
+      <li><a href="functions_vars.html"><span>변수</span></a></li>
+      <li><a href="functions_eval.html"><span>열거형&#160;멤버</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow4" class="tabs3">
+    <ul class="tablist">
+      <li><a href="#index__"><span>_</span></a></li>
+      <li><a href="#index_a"><span>a</span></a></li>
+      <li><a href="#index_b"><span>b</span></a></li>
+      <li><a href="#index_c"><span>c</span></a></li>
+      <li><a href="#index_d"><span>d</span></a></li>
+      <li><a href="#index_e"><span>e</span></a></li>
+      <li><a href="#index_g"><span>g</span></a></li>
+      <li><a href="#index_h"><span>h</span></a></li>
+      <li><a href="#index_i"><span>i</span></a></li>
+      <li><a href="#index_l"><span>l</span></a></li>
+      <li><a href="#index_m"><span>m</span></a></li>
+      <li><a href="#index_o"><span>o</span></a></li>
+      <li><a href="#index_p"><span>p</span></a></li>
+      <li><a href="#index_s"><span>s</span></a></li>
+      <li><a href="#index_t"><span>t</span></a></li>
+      <li><a href="#index_v"><span>v</span></a></li>
+      <li><a href="#index_x"><span>x</span></a></li>
+      <li><a href="#index_y"><span>y</span></a></li>
+      <li><a href="#index_0x7e"><span>~</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>모두</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>클래스</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>파일들</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>함수</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>변수</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>열거형 멤버</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>매크로</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>페이지들</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="contents">
+<div class="textblock">다음은 모든 클래스 멤버들의 목록입니다. 각 멤버들은 해당 멤버가 속해 있는 클래스에 대한 링크를 가지고 있습니다. :</div>
+
+<h3><a class="anchor" id="index__"></a>- _ -</h3><ul>
+<li>_POINT()
+: <a class="el" href="class___p_o_i_n_t.html#aebc7d45f047362dce0d56e6cd530ad6c">_POINT</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
+<li>A
+: <a class="el" href="class_m_a_t_r_i_x3_d.html#ad46f057c72ed680b5d94f7b168908fc9">MATRIX3D</a>
+</li>
+<li>a
+: <a class="el" href="class_m_a_t_r_i_x2_d.html#a4ae1e61f3b886f9b3ce346f6d54de973">MATRIX2D</a>
+</li>
+<li>AffineTransform()
+: <a class="el" href="class_m_a_t_r_i_x3_d.html#a9c5556589092317bb63fbb8b681035ab">MATRIX3D</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
+<li>bilinearInterpolation()
+: <a class="el" href="class_my_image.html#a596dba2536ed1ae57835bf70fcfb1b69">MyImage</a>
+</li>
+<li>BinarizeImage()
+: <a class="el" href="class_my_image.html#ac513076c52619abd251d0e756e256c9a">MyImage</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
+<li>CAboutDlg()
+: <a class="el" href="class_c_about_dlg.html#a6d1e6a33fef23bee6e75254189d865ce">CAboutDlg</a>
+</li>
+<li>calcBilinear()
+: <a class="el" href="class_my_image.html#a7b7c78fb05bb1378e8ce2a24d8cd3920">MyImage</a>
+</li>
+<li>calcDet()
+: <a class="el" href="class_m_a_t_r_i_x3_d.html#a81930ff56a1e199b2d3e606f27ed0a29">MATRIX3D</a>
+</li>
+<li>calcMask()
+: <a class="el" href="class_c_my_image_processing_doc.html#a541cb66c2473454a49be669acaa0db67">CMyImageProcessingDoc</a>
+</li>
+<li>calculateMask()
+: <a class="el" href="class_my_image.html#afec37177692c60c74d1dfba40c890642">MyImage</a>
+</li>
+<li>CBinthSet()
+: <a class="el" href="class_c_binth_set.html#a3e8d4b627eea7c34e4779323dc6398fb">CBinthSet</a>
+</li>
+<li>CChildFrame()
+: <a class="el" href="class_c_child_frame.html#ac25f19634b6795d77ef5b739900232d6">CChildFrame</a>
+</li>
+<li>CHBDlg()
+: <a class="el" href="class_c_h_b_dlg.html#ad1ad2d7431f683474b3e674a758e45cf">CHBDlg</a>
+</li>
+<li>CHistDlg()
+: <a class="el" href="class_c_hist_dlg.html#aa172ce29b9e60682f146391eff5fdce0">CHistDlg</a>
+</li>
+<li>CMainFrame()
+: <a class="el" href="class_c_main_frame.html#af3e997aeae4148d2aaa4a1e1ae7bdd53">CMainFrame</a>
+</li>
+<li>CMyImageProcessingApp()
+: <a class="el" href="class_c_my_image_processing_app.html#ad1f80d98d11ebd682d96f4f242a1ac8e">CMyImageProcessingApp</a>
+</li>
+<li>CMyImageProcessingDoc()
+: <a class="el" href="class_c_my_image_processing_doc.html#a9ec11e938f149d2669d791c89772e5ac">CMyImageProcessingDoc</a>
+</li>
+<li>CMyImageProcessingView()
+: <a class="el" href="class_c_my_image_processing_view.html#a0ccc747475b76eb445e997c6dd5d4496">CMyImageProcessingView</a>
+</li>
+<li>CPowDlg()
+: <a class="el" href="class_c_pow_dlg.html#ae9a905bda1e55e4ca19b1a47032f74a4">CPowDlg</a>
+</li>
+<li>CSclDlg()
+: <a class="el" href="class_c_scl_dlg.html#a0024f026091f91c0850e77b103f5f30a">CSclDlg</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
+<li>DeleteContents()
+: <a class="el" href="class_c_my_image_processing_doc.html#a27823ce295ac534756ddd1c5c672c963">CMyImageProcessingDoc</a>
+</li>
+<li>det
+: <a class="el" href="class_m_a_t_r_i_x3_d.html#a836b104900b7c16a92bda6e41612a77d">MATRIX3D</a>
+</li>
+<li>det_flag
+: <a class="el" href="class_m_a_t_r_i_x3_d.html#ab951cbc695222c9cd96d1f2990b1a662">MATRIX3D</a>
+</li>
+<li>DoDataExchange()
+: <a class="el" href="class_c_about_dlg.html#ab83db7484fec957282d7d5a21aed4df4">CAboutDlg</a>
+, <a class="el" href="class_c_hist_dlg.html#ad79b371c18c4129610b59608d97ed67f">CHistDlg</a>
+, <a class="el" href="class_c_h_b_dlg.html#a4a5143405ebecad3bbc6e32dcc0b0f9b">CHBDlg</a>
+, <a class="el" href="class_c_binth_set.html#ae150a279770f1fe4f597b73c07e887ba">CBinthSet</a>
+, <a class="el" href="class_c_pow_dlg.html#ae14602a28d4e977498508f5c6212bc57">CPowDlg</a>
+, <a class="el" href="class_c_scl_dlg.html#ac310ef75be8baafc95824aed2cc6ba23">CSclDlg</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_e"></a>- e -</h3><ul>
+<li>ExitInstance()
+: <a class="el" href="class_c_my_image_processing_app.html#aa9f926c482433d072c7594667a685fef">CMyImageProcessingApp</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
+<li>get()
+: <a class="el" href="class_m_a_t_r_i_x3_d.html#a215a4ab44606797cd7f2b1551cd05431">MATRIX3D</a>
+</li>
+<li>getChannelColor()
+: <a class="el" href="class_my_image.html#af8815f475d86d16653e4295b94fba5af">MyImage</a>
+</li>
+<li>getCofactor()
+: <a class="el" href="class_m_a_t_r_i_x3_d.html#a23292251c50eab390168914069cefc0e">MATRIX3D</a>
+</li>
+<li>GetCxImage()
+: <a class="el" href="class_my_image.html#ac2f462436d7f711d457772ed961fa6d7">MyImage</a>
+</li>
+<li>getDegree()
+: <a class="el" href="class_my_image.html#a2ee075ed79cf8759bcaa5efa2e145ef5">MyImage</a>
+</li>
+<li>getDet()
+: <a class="el" href="class_m_a_t_r_i_x2_d.html#a0c4cad4dbb6ad4a5a560d4c9876cd071">MATRIX2D</a>
+, <a class="el" href="class_m_a_t_r_i_x3_d.html#ab9708baa5af2ffe980632870e88c1559">MATRIX3D</a>
+</li>
+<li>GetDocument()
+: <a class="el" href="class_c_my_image_processing_view.html#ae19eb5b26c93701a159e2ba4f8450642">CMyImageProcessingView</a>
+</li>
+<li>getMaxRGB()
+: <a class="el" href="class_my_image.html#a67139f04c5ab4bb113874b7f3d10de3d">MyImage</a>
+</li>
+<li>getMeanRGB()
+: <a class="el" href="class_my_image.html#a454bd6266ccaa80824c25374bb49411b">MyImage</a>
+</li>
+<li>getMedianRGB()
+: <a class="el" href="class_my_image.html#a2e9eda07e542c7d166a9b51df8f57d04">MyImage</a>
+</li>
+<li>getMinRGB()
+: <a class="el" href="class_my_image.html#abf923f02f9ff7fb47dd87e716f0afac9">MyImage</a>
+</li>
+<li>getX()
+: <a class="el" href="class___p_o_i_n_t.html#aa45385011e59d7e3124bed2e889bafa5">_POINT</a>
+</li>
+<li>getY()
+: <a class="el" href="class___p_o_i_n_t.html#a90459303c88af3a2046bb85d4033b524">_POINT</a>
+</li>
+<li>GrayScaleImage()
+: <a class="el" href="class_my_image.html#a0bd4058dece17b17c98fb0cf2786e61b">MyImage</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_h"></a>- h -</h3><ul>
+<li>HighBoostFilterImage()
+: <a class="el" href="class_my_image.html#af6c300627fcb08f1a1a54990c5abffd2">MyImage</a>
+</li>
+<li>HistogramEqualizeImage()
+: <a class="el" href="class_my_image.html#adeb9f3c9a8e674d3170b13952d033329">MyImage</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
+<li>IDD
+: <a class="el" href="class_c_binth_set.html#aca68a0fab0b7b10ebe4fd14a8a6c8c54a9d704acbd71024f8a51ae396d202392d">CBinthSet</a>
+, <a class="el" href="class_c_h_b_dlg.html#a85c548c902dee40ffff4a0ab6abf026ea551e8b24bba5583d8430cdec070fdd90">CHBDlg</a>
+, <a class="el" href="class_c_about_dlg.html#ab29e21bead9ca10b63b4628e8f8e4325ab6703c7538518b2b788243189e9f7981">CAboutDlg</a>
+, <a class="el" href="class_c_pow_dlg.html#a683a28f8cb6129b2d9f1a8b992832120ac1b1f511a60bab7cfaa28eba3c6a15e5">CPowDlg</a>
+, <a class="el" href="class_c_hist_dlg.html#ac536fdef65118a44834ace1e795b5d53a6355bda489fa5ea40bdc03fb4ea1baea">CHistDlg</a>
+, <a class="el" href="class_c_scl_dlg.html#a1ed7185c27a2ce41c94d772b6b1bd6eca37c13cd75af0df4b69cff990e78b8c5c">CSclDlg</a>
+</li>
+<li>image
+: <a class="el" href="class_my_image.html#a8ac6996526b9d73661c339db66680676">MyImage</a>
+</li>
+<li>InitInstance()
+: <a class="el" href="class_c_my_image_processing_app.html#a39dbd1c72587d475ba844ace08463174">CMyImageProcessingApp</a>
+</li>
+<li>inverse()
+: <a class="el" href="class_m_a_t_r_i_x2_d.html#a8593d4fd11d45ea256047900ebc77307">MATRIX2D</a>
+, <a class="el" href="class_m_a_t_r_i_x3_d.html#a4133adf628205e22c49d420d80f4336e">MATRIX3D</a>
+</li>
+<li>InverseImage()
+: <a class="el" href="class_my_image.html#ab1b09108047771667e6eea6974a1ba44">MyImage</a>
+</li>
+<li>isInversible()
+: <a class="el" href="class_m_a_t_r_i_x2_d.html#ae5018742fa0dfa84dbb2466c0789bdcd">MATRIX2D</a>
+, <a class="el" href="class_m_a_t_r_i_x3_d.html#ae04bbddf00d6572e12b67eb9a0d6d55f">MATRIX3D</a>
+</li>
+<li>isSet
+: <a class="el" href="class_m_a_t_r_i_x3_d.html#a3d3bd9c2ee0c213ca2f69804c3db6ac6">MATRIX3D</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
+<li>LaplacianFilterImage()
+: <a class="el" href="class_my_image.html#ac66955eba0161330746e7184c63b6a70">MyImage</a>
+</li>
+<li>Load()
+: <a class="el" href="class_my_image.html#af66f432007e738f823339d4687a218ad">MyImage</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>m_A
+: <a class="el" href="class_c_h_b_dlg.html#a9df17f6054e5bd5e4acfabe606fc12b3">CHBDlg</a>
+</li>
+<li>m_binth
+: <a class="el" href="class_c_binth_set.html#aa81e0016e3e463a022dbbaa6c7f85f2a">CBinthSet</a>
+</li>
+<li>m_Cx
+: <a class="el" href="class_c_scl_dlg.html#ae24bfb6ef6de4cb6cbc6f3b6cdae619b">CSclDlg</a>
+</li>
+<li>m_Cy
+: <a class="el" href="class_c_scl_dlg.html#a6864c7ad7a17b92a9c9e670a871cf9d9">CSclDlg</a>
+</li>
+<li>m_Histogram
+: <a class="el" href="class_c_hist_dlg.html#a6c2d395cebef6f871fd1791fa57b6f55">CHistDlg</a>
+</li>
+<li>m_Image
+: <a class="el" href="class_c_my_image_processing_doc.html#a4f70944ed5cc5c772165aec9a9e88c69">CMyImageProcessingDoc</a>
+</li>
+<li>m_img
+: <a class="el" href="class_c_hist_dlg.html#a931451fed18d5abe289575cecc8e9f54">CHistDlg</a>
+</li>
+<li>m_NewImage
+: <a class="el" href="class_c_my_image_processing_app.html#aa5a25236bb1a996bb2c86864d54fba25">CMyImageProcessingApp</a>
+</li>
+<li>m_nType
+: <a class="el" href="class_c_scl_dlg.html#aa52708335531c455850915172bff26ba">CSclDlg</a>
+</li>
+<li>m_pImage
+: <a class="el" href="class_c_my_image_processing_doc.html#ad5fdd82c16f80240fb27e6f3a04a333b">CMyImageProcessingDoc</a>
+</li>
+<li>m_pNewImage
+: <a class="el" href="class_c_my_image_processing_app.html#ad42155c6a3d9aad19b57bb15a06ddda9">CMyImageProcessingApp</a>
+</li>
+<li>m_t
+: <a class="el" href="class_c_pow_dlg.html#a62c895a66edd34c933bbe99371ca1ecf">CPowDlg</a>
+</li>
+<li>m_wndStatusBar
+: <a class="el" href="class_c_main_frame.html#ac01bafc03aee69cf982e6f029b4db6b0">CMainFrame</a>
+</li>
+<li>MATRIX2D()
+: <a class="el" href="class_m_a_t_r_i_x2_d.html#aacd4a6b2603c7d34c08da1ddf118ab19">MATRIX2D</a>
+</li>
+<li>MATRIX3D()
+: <a class="el" href="class_m_a_t_r_i_x3_d.html#a85e81a995201846d602ab80f502626e6">MATRIX3D</a>
+</li>
+<li>MaxFilterImage()
+: <a class="el" href="class_my_image.html#a9c679fe0d1c067a40297ac805b02bfad">MyImage</a>
+</li>
+<li>MeanFilterImage()
+: <a class="el" href="class_my_image.html#a2351ec80136c2ef0e44564443bcd95d6">MyImage</a>
+</li>
+<li>MedianFilterImage()
+: <a class="el" href="class_my_image.html#a642496d4037beaf9da663b8d1ad783d9">MyImage</a>
+</li>
+<li>MinFilterImage()
+: <a class="el" href="class_my_image.html#a258d1539f4841dd0c9f4453cd4b84b16">MyImage</a>
+</li>
+<li>MyImage()
+: <a class="el" href="class_my_image.html#adf236c5bf489ea412707c141ebff6376">MyImage</a>
+</li>
+<li>MyRGB()
+: <a class="el" href="class_my_image.html#a6deaa1ee63f0944648c18c75a6955ada">MyImage</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
+<li>OnAppAbout()
+: <a class="el" href="class_c_my_image_processing_app.html#ad29a277fd0fba00c3fd4dfecc47a2eca">CMyImageProcessingApp</a>
+</li>
+<li>OnBnClickedOk()
+: <a class="el" href="class_c_binth_set.html#a35f30f579e72fc9593335e620065aa15">CBinthSet</a>
+</li>
+<li>OnBnClickedRadio1()
+: <a class="el" href="class_c_hist_dlg.html#a9cf978b6cac92b42356db7e01502bd25">CHistDlg</a>
+</li>
+<li>OnBnClickedRadio2()
+: <a class="el" href="class_c_hist_dlg.html#afddab2267513f03160832fb11491d58d">CHistDlg</a>
+</li>
+<li>OnBnClickedRadio3()
+: <a class="el" href="class_c_hist_dlg.html#a1afa7ec674ebbe137b275d5c62f967db">CHistDlg</a>
+</li>
+<li>OnCartesianTrans()
+: <a class="el" href="class_c_my_image_processing_doc.html#a7798d32dd4e007b2f92a4cfd17863660">CMyImageProcessingDoc</a>
+</li>
+<li>OnCreate()
+: <a class="el" href="class_c_main_frame.html#a48666466fd37412fcaeff75c3b12e0ed">CMainFrame</a>
+</li>
+<li>OnDraw()
+: <a class="el" href="class_c_my_image_processing_view.html#a8141402da8677e04e9e50643e01cf0dc">CMyImageProcessingView</a>
+</li>
+<li>OnEraseBkgnd()
+: <a class="el" href="class_c_my_image_processing_view.html#affb65d870bf1d6cd682178ecf64ccab3">CMyImageProcessingView</a>
+</li>
+<li>OnHighBoost()
+: <a class="el" href="class_c_my_image_processing_doc.html#a02adaf0fa2601aa7257403f3add15d45">CMyImageProcessingDoc</a>
+</li>
+<li>OnHist()
+: <a class="el" href="class_c_my_image_processing_doc.html#a224d7b1fc7bcf0f034e5e0b3d46c186e">CMyImageProcessingDoc</a>
+</li>
+<li>OnHistEq()
+: <a class="el" href="class_c_my_image_processing_doc.html#a5f3fbe7ce6035ae4837adc633517ade2">CMyImageProcessingDoc</a>
+</li>
+<li>OnImgBin()
+: <a class="el" href="class_c_my_image_processing_doc.html#a222391b07cb5517c953f291975d3a4ae">CMyImageProcessingDoc</a>
+</li>
+<li>OnImgGray()
+: <a class="el" href="class_c_my_image_processing_doc.html#a3922aa78dfd3a645704b51650716bc5d">CMyImageProcessingDoc</a>
+</li>
+<li>OnImgInv()
+: <a class="el" href="class_c_my_image_processing_doc.html#adf46e407c93d02b63a668c7ac5089d57">CMyImageProcessingDoc</a>
+</li>
+<li>OnImgScl()
+: <a class="el" href="class_c_my_image_processing_doc.html#ac3eb4d895a330361dfc6dfcdb48c9437">CMyImageProcessingDoc</a>
+</li>
+<li>OnInitDialog()
+: <a class="el" href="class_c_hist_dlg.html#ae655e453dd12a2ee5db4c1ab2bb57c88">CHistDlg</a>
+</li>
+<li>OnInitialUpdate()
+: <a class="el" href="class_c_my_image_processing_view.html#aea4e6524b1eb6e73f1f444c1984323af">CMyImageProcessingView</a>
+</li>
+<li>OnLaplacion()
+: <a class="el" href="class_c_my_image_processing_doc.html#a8d8f9f5aacf4200ccb0047aa1afd949a">CMyImageProcessingDoc</a>
+</li>
+<li>OnNewDocument()
+: <a class="el" href="class_c_my_image_processing_doc.html#ace51febeb853241b30e372aeec5c736c">CMyImageProcessingDoc</a>
+</li>
+<li>OnOpenDocument()
+: <a class="el" href="class_c_my_image_processing_doc.html#a298ff63e6cf66c8e034a1b23439e36a0">CMyImageProcessingDoc</a>
+</li>
+<li>OnOrderMaxfilter()
+: <a class="el" href="class_c_my_image_processing_doc.html#ae19b8ec98c48bb0092cd6d49a4365870">CMyImageProcessingDoc</a>
+</li>
+<li>OnOrderMeanfilter()
+: <a class="el" href="class_c_my_image_processing_doc.html#acc6818171d5d567884143cdd10a5cb25">CMyImageProcessingDoc</a>
+</li>
+<li>OnOrderMedianfilter()
+: <a class="el" href="class_c_my_image_processing_doc.html#a179bd964abd852b3276b536e6d1cbfaa">CMyImageProcessingDoc</a>
+</li>
+<li>OnOrderMinfilter()
+: <a class="el" href="class_c_my_image_processing_doc.html#a086368f43f1bdca128134b4397942516">CMyImageProcessingDoc</a>
+</li>
+<li>OnPaint()
+: <a class="el" href="class_c_hist_dlg.html#ada0bb1f41d5042d24816802a405b064e">CHistDlg</a>
+</li>
+<li>OnPolarTrans()
+: <a class="el" href="class_c_my_image_processing_doc.html#afdc7a9e36d9ec2d9f600737ed67a31d7">CMyImageProcessingDoc</a>
+</li>
+<li>OnPolarTransInv()
+: <a class="el" href="class_c_my_image_processing_doc.html#a2ce4f7dce9e33b9bb7baf5cfc908b516">CMyImageProcessingDoc</a>
+</li>
+<li>OnPower()
+: <a class="el" href="class_c_my_image_processing_doc.html#a59e47774204f909d57cbb86b12a2d0ab">CMyImageProcessingDoc</a>
+</li>
+<li>OnSaveDocument()
+: <a class="el" href="class_c_my_image_processing_doc.html#a462530f8b6ba55216a02afd079e54a85">CMyImageProcessingDoc</a>
+</li>
+<li>OnSmLin()
+: <a class="el" href="class_c_my_image_processing_doc.html#a81bf8bfe13998034c311facb4480b72a">CMyImageProcessingDoc</a>
+</li>
+<li>OnSobel()
+: <a class="el" href="class_c_my_image_processing_doc.html#ae1eb87303d441fee44eee9cc0713f35e">CMyImageProcessingDoc</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
+<li>PowerLawImage()
+: <a class="el" href="class_my_image.html#aaaab34952da21ff0590b583b72ecc8cb">MyImage</a>
+</li>
+<li>PreCreateWindow()
+: <a class="el" href="class_c_my_image_processing_view.html#a6fc6c61da49421369f2705b5db7a3008">CMyImageProcessingView</a>
+, <a class="el" href="class_c_main_frame.html#a549bf677c955c2898c3c683321633c16">CMainFrame</a>
+, <a class="el" href="class_c_child_frame.html#afe5999283ada65f5b1f9fbabb288a8fe">CChildFrame</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>ScaleImage()
+: <a class="el" href="class_my_image.html#abaa46d41275dcfed4295c9da48be6c9e">MyImage</a>
+</li>
+<li>Serialize()
+: <a class="el" href="class_c_my_image_processing_doc.html#afccbabdc62acc9c794684f19ba91706c">CMyImageProcessingDoc</a>
+</li>
+<li>set()
+: <a class="el" href="class_m_a_t_r_i_x3_d.html#ac3e4b69526d21abcc0db1ddd1718b6a8">MATRIX3D</a>
+</li>
+<li>SetImage()
+: <a class="el" href="class_c_hist_dlg.html#a29a406cadf520060ad60a7a9a246ac57">CHistDlg</a>
+</li>
+<li>setPoint()
+: <a class="el" href="class___p_o_i_n_t.html#a83d7143450421cccb3429d3da3df1ac3">_POINT</a>
+</li>
+<li>SmoothingLinearFilterImage()
+: <a class="el" href="class_my_image.html#ad7944b144f9744e17051878b4b50c951">MyImage</a>
+</li>
+<li>SobelFilterImage()
+: <a class="el" href="class_my_image.html#aae9305b240652af26a79862f2b21f0e1">MyImage</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
+<li>transform()
+: <a class="el" href="class_my_image.html#a12bac49a024e6c9089a88adb6edca6e1">MyImage</a>
+</li>
+<li>TransformIntoCartecian()
+: <a class="el" href="class_my_image.html#aa53e9b0fa696a4de66da49b13b9afd48">MyImage</a>
+</li>
+<li>TransformIntoPolar()
+: <a class="el" href="class_my_image.html#a0bf6e1069067a1e6ac8d9fb6f9e4e16e">MyImage</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_v"></a>- v -</h3><ul>
+<li>ViewImage()
+: <a class="el" href="class_c_my_image_processing_doc.html#a6b945ff1dea330304876d455efbce925">CMyImageProcessingDoc</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_x"></a>- x -</h3><ul>
+<li>x
+: <a class="el" href="class___p_o_i_n_t.html#a6ee692c537dddb23fb74564a3d197d0c">_POINT</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_y"></a>- y -</h3><ul>
+<li>y
+: <a class="el" href="class___p_o_i_n_t.html#a111acb89986d4cd271761fce3b8ea9ba">_POINT</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_0x7e"></a>- ~ -</h3><ul>
+<li>~CBinthSet()
+: <a class="el" href="class_c_binth_set.html#aa9d7aa54a9308bc3a8c330f5289c4912">CBinthSet</a>
+</li>
+<li>~CChildFrame()
+: <a class="el" href="class_c_child_frame.html#ae43d3b449c8696c96963d0818de69735">CChildFrame</a>
+</li>
+<li>~CHBDlg()
+: <a class="el" href="class_c_h_b_dlg.html#aa6fa7e090e4b39b162e071867acad12e">CHBDlg</a>
+</li>
+<li>~CHistDlg()
+: <a class="el" href="class_c_hist_dlg.html#a16e7c76fa6892cb0545974d62a089521">CHistDlg</a>
+</li>
+<li>~CMainFrame()
+: <a class="el" href="class_c_main_frame.html#a8ae555f23fdf97edb4feb4d3e1bfa4ee">CMainFrame</a>
+</li>
+<li>~CMyImageProcessingDoc()
+: <a class="el" href="class_c_my_image_processing_doc.html#af38a8ca89b352f41e050415e15f4414a">CMyImageProcessingDoc</a>
+</li>
+<li>~CMyImageProcessingView()
+: <a class="el" href="class_c_my_image_processing_view.html#a62b5e3b81a2aa694615f507e4100c75e">CMyImageProcessingView</a>
+</li>
+<li>~CPowDlg()
+: <a class="el" href="class_c_pow_dlg.html#adfea03ae30c4fe603b1e8f762f5d1753">CPowDlg</a>
+</li>
+<li>~CSclDlg()
+: <a class="el" href="class_c_scl_dlg.html#a643c698da9bdf5e630a9c452812b0db5">CSclDlg</a>
+</li>
+<li>~MyImage()
+: <a class="el" href="class_my_image.html#a3815977e82da79d45b56609bc448b3b4">MyImage</a>
+</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+생성시간 : 일 11월 11 2012 01:23:01, 프로젝트명 : MyImageProcessing, 생성자 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.2
+</small></address>
+</body>
+</html>

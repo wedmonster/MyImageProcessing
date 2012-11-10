@@ -15,6 +15,7 @@ protected: // serialization에서만 만들어집니다.
 // 특성입니다.
 public:
 	CxImage* m_pImage;
+	MyImage* m_Image;
 // 작업입니다.
 public:
 
@@ -46,7 +47,8 @@ protected:
 	void SetSearchContent(const CString& value);
 #endif // SHARED_HANDLERS
 public:
-	afx_msg void OnFileOpen();
+//	afx_msg void OnFileOpen();
+	void ViewImage(MyImage& img);
 	virtual BOOL OnOpenDocument(LPCTSTR lpszPathName);
 	virtual void DeleteContents();
 	virtual BOOL OnSaveDocument(LPCTSTR lpszPathName);
@@ -64,4 +66,10 @@ public:
 	afx_msg void OnOrderMaxfilter();
 	afx_msg void OnOrderMedianfilter();
 	afx_msg void OnOrderMinfilter();
+//	afx_msg void OnFileNewOpen();
+	afx_msg void OnPolarTrans();
+	afx_msg void OnPolarTransInv();
+	afx_msg void OnCartesianTrans();
+	afx_msg void OnPower();
+	afx_msg void OnOrderMeanfilter();
 };

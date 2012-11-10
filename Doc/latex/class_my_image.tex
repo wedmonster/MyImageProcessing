@@ -1,0 +1,677 @@
+\hypertarget{class_my_image}{\section{My\-Image 클래스 참조}
+\label{class_my_image}\index{My\-Image@{My\-Image}}
+}
+
+
+각종 영상처리 기법 구현  
+
+
+
+
+{\ttfamily \#include $<$My\-Image.\-h$>$}
+
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_my_image_adf236c5bf489ea412707c141ebff6376}{My\-Image} (void)
+\item 
+\hyperlink{class_my_image_aec3a93c4c78cca085a42aa9feb303644}{My\-Image} (Cx\-Image \&img)
+\item 
+\hyperlink{class_my_image_abc4435c99ff10f1ad3545fdffbdb022d}{My\-Image} (\hyperlink{class_my_image}{My\-Image} \&m\-\_\-img)
+\item 
+\hyperlink{class_my_image_aaa54440da34007183987415e3804a49f}{My\-Image} (int width, int height, int wbpp)
+\item 
+\hyperlink{class_my_image_a3815977e82da79d45b56609bc448b3b4}{$\sim$\-My\-Image} (void)
+\item 
+Cx\-Image $\ast$ \hyperlink{class_my_image_ac2f462436d7f711d457772ed961fa6d7}{Get\-Cx\-Image} ()
+\begin{DoxyCompactList}\small\item\em Cx\-Image 포인터를 반환한다. \end{DoxyCompactList}\item 
+bool \hyperlink{class_my_image_af66f432007e738f823339d4687a218ad}{Load} (L\-P\-C\-T\-S\-T\-R lpsz\-Path\-Name)
+\begin{DoxyCompactList}\small\item\em lpsz\-Path\-Name의 이미지를 불러와 Cx\-Image에 Load한다. \end{DoxyCompactList}\item 
+\hyperlink{class_my_image}{My\-Image} \hyperlink{class_my_image_abaa46d41275dcfed4295c9da48be6c9e}{Scale\-Image} (double w, double h)
+\begin{DoxyCompactList}\small\item\em 이미지를 가로 w배, 세로 h배 Scale(확대/축소)한다. \end{DoxyCompactList}\item 
+\hyperlink{class_my_image}{My\-Image} \hyperlink{class_my_image_a0bd4058dece17b17c98fb0cf2786e61b}{Gray\-Scale\-Image} ()
+\begin{DoxyCompactList}\small\item\em 이미지를 Gray-\/\-Scale하여 반환한다. \end{DoxyCompactList}\item 
+\hyperlink{class_my_image}{My\-Image} \hyperlink{class_my_image_ab1b09108047771667e6eea6974a1ba44}{Inverse\-Image} ()
+\begin{DoxyCompactList}\small\item\em 이미지 색상을 반전시킨다. \end{DoxyCompactList}\item 
+\hyperlink{class_my_image}{My\-Image} \hyperlink{class_my_image_ac513076c52619abd251d0e756e256c9a}{Binarize\-Image} (int threshold)
+\begin{DoxyCompactList}\small\item\em threshold 값을 기준으로 이진화한다. \end{DoxyCompactList}\item 
+\hyperlink{class_my_image}{My\-Image} \hyperlink{class_my_image_adeb9f3c9a8e674d3170b13952d033329}{Histogram\-Equalize\-Image} ()
+\begin{DoxyCompactList}\small\item\em Histogram Equalization을 수행하고 변환 영상을 리턴한다. \end{DoxyCompactList}\item 
+\hyperlink{class_my_image}{My\-Image} \hyperlink{class_my_image_ac66955eba0161330746e7184c63b6a70}{Laplacian\-Filter\-Image} ()
+\begin{DoxyCompactList}\small\item\em 선명화(\-Sharpening) 기법 \-: Laplacian Filter \end{DoxyCompactList}\item 
+\hyperlink{class_my_image}{My\-Image} \hyperlink{class_my_image_af6c300627fcb08f1a1a54990c5abffd2}{High\-Boost\-Filter\-Image} (const double A)
+\begin{DoxyCompactList}\small\item\em 선명화(\-Sharpening) 기법 \-: High-\/\-Boost Filter \end{DoxyCompactList}\item 
+\hyperlink{class_my_image}{My\-Image} \hyperlink{class_my_image_aae9305b240652af26a79862f2b21f0e1}{Sobel\-Filter\-Image} ()
+\begin{DoxyCompactList}\small\item\em 선명화(\-Sharpening) 기법 \-: Sobel Filter \end{DoxyCompactList}\item 
+\hyperlink{class_my_image}{My\-Image} \hyperlink{class_my_image_ad7944b144f9744e17051878b4b50c951}{Smoothing\-Linear\-Filter\-Image} ()
+\begin{DoxyCompactList}\small\item\em 평활화(\-Smoothing) 기법 \-: Linear Filter \end{DoxyCompactList}\item 
+\hyperlink{class_my_image}{My\-Image} \hyperlink{class_my_image_a9c679fe0d1c067a40297ac805b02bfad}{Max\-Filter\-Image} ()
+\begin{DoxyCompactList}\small\item\em Order-\/\-Statistics 기법 \-: Max Filter. \end{DoxyCompactList}\item 
+\hyperlink{class_my_image}{My\-Image} \hyperlink{class_my_image_a258d1539f4841dd0c9f4453cd4b84b16}{Min\-Filter\-Image} ()
+\begin{DoxyCompactList}\small\item\em Order-\/\-Statistics 기법 \-: Min Filter. \end{DoxyCompactList}\item 
+\hyperlink{class_my_image}{My\-Image} \hyperlink{class_my_image_a642496d4037beaf9da663b8d1ad783d9}{Median\-Filter\-Image} ()
+\begin{DoxyCompactList}\small\item\em Order-\/\-Statistics 기법 \-: Median Filter. \end{DoxyCompactList}\item 
+\hyperlink{class_my_image}{My\-Image} \hyperlink{class_my_image_a2351ec80136c2ef0e44564443bcd95d6}{Mean\-Filter\-Image} ()
+\begin{DoxyCompactList}\small\item\em Order-\/\-Statistics 기법 \-: Mean Filter. \end{DoxyCompactList}\item 
+\hyperlink{class_my_image}{My\-Image} \hyperlink{class_my_image_a0bf6e1069067a1e6ac8d9fb6f9e4e16e}{Transform\-Into\-Polar} ()
+\begin{DoxyCompactList}\small\item\em 영상의 중점을 중심으로 극좌표계(r, theta)로 변환한 이미지를 반환한다. 정사각형 이미지만 들어온다고 가정한다. \end{DoxyCompactList}\item 
+\hyperlink{class_my_image}{My\-Image} \hyperlink{class_my_image_aa53e9b0fa696a4de66da49b13b9afd48}{Transform\-Into\-Cartecian} ()
+\begin{DoxyCompactList}\small\item\em 총 크기 r/root(2) by r/root(2)이고 (r/root(2), r/root(2))이 중심인 직각좌표계로 변환한 이미지를 반환한다. r은 이미지의 height이다. \end{DoxyCompactList}\item 
+\hyperlink{class_my_image}{My\-Image} \hyperlink{class_my_image_aaaab34952da21ff0590b583b72ecc8cb}{Power\-Law\-Image} (double t)
+\begin{DoxyCompactList}\small\item\em 지수승 t로 power-\/law를 적용한다. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_my_image_a12bac49a024e6c9089a88adb6edca6e1}{transform} (\hyperlink{class_my_image}{My\-Image} \&new\-Image, \hyperlink{class_m_a_t_r_i_x3_d}{M\-A\-T\-R\-I\-X3\-D} \&mat)
+\begin{DoxyCompactList}\small\item\em 현재 이미지를 Trasform계수(3차원 행렬)에 의해 변형하여 new\-Image에 저장한다. 내부적으로 Affine\-Transform를 수행한다. \end{DoxyCompactList}\item 
+R\-G\-B\-Q\-U\-A\-D \hyperlink{class_my_image_a596dba2536ed1ae57835bf70fcfb1b69}{bilinear\-Interpolation} (\hyperlink{class___p_o_i_n_t}{\-\_\-\-P\-O\-I\-N\-T} \&input)
+\begin{DoxyCompactList}\small\item\em input에 대한 Inverse Mapping시 Bilinear Interpolation 방식으로 픽셀 값을 가져온다. \end{DoxyCompactList}\item 
+int \hyperlink{class_my_image_a7b7c78fb05bb1378e8ce2a24d8cd3920}{calc\-Bilinear} (int l, int k, double a, double b, int channel)
+\begin{DoxyCompactList}\small\item\em Bilinear Interpolation을 위한 보조 계산 함수 \end{DoxyCompactList}\item 
+int \hyperlink{class_my_image_af8815f475d86d16653e4295b94fba5af}{get\-Channel\-Color} (int x, int y, int channel)
+\begin{DoxyCompactList}\small\item\em R\-G\-B중 하나의 채널에서 (x, y)의 픽셀 값을 리턴한다. \end{DoxyCompactList}\item 
+R\-G\-B\-Q\-U\-A\-D \hyperlink{class_my_image_a6deaa1ee63f0944648c18c75a6955ada}{My\-R\-G\-B} (int r, int g, int b)
+\begin{DoxyCompactList}\small\item\em 각 채널의 픽셀값을 받아서 R\-G\-B\-Q\-U\-A\-D로 반환 \end{DoxyCompactList}\item 
+R\-G\-B\-Q\-U\-A\-D \hyperlink{class_my_image_afec37177692c60c74d1dfba40c890642}{calculate\-Mask} (const double mask\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]}, \hyperlink{class___p_o_i_n_t}{\-\_\-\-P\-O\-I\-N\-T} \&input)
+\begin{DoxyCompactList}\small\item\em 3 by 3 mask를 받아서 적용하고 계산 결과를 리턴 \end{DoxyCompactList}\item 
+R\-G\-B\-Q\-U\-A\-D \hyperlink{class_my_image_a67139f04c5ab4bb113874b7f3d10de3d}{get\-Max\-R\-G\-B} (\hyperlink{class___p_o_i_n_t}{\-\_\-\-P\-O\-I\-N\-T} \&input)
+\begin{DoxyCompactList}\small\item\em 기준 좌표를 중심으로 3 by 3내의 값중 가장 큰 것의 R\-G\-B값을 리턴 현재는 각 채널 별로 값을 뽑아서 조합하여 리턴하는 것으로 하고 있음. \end{DoxyCompactList}\item 
+R\-G\-B\-Q\-U\-A\-D \hyperlink{class_my_image_abf923f02f9ff7fb47dd87e716f0afac9}{get\-Min\-R\-G\-B} (\hyperlink{class___p_o_i_n_t}{\-\_\-\-P\-O\-I\-N\-T} \&input)
+\begin{DoxyCompactList}\small\item\em 기준 좌표를 중심으로 3 by 3내의 값중 가장 작은 것의 R\-G\-B값을 리턴 현재는 각 채널 별로 값을 뽑아서 조합하여 리턴하는 것으로 하고 있음. \end{DoxyCompactList}\item 
+R\-G\-B\-Q\-U\-A\-D \hyperlink{class_my_image_a2e9eda07e542c7d166a9b51df8f57d04}{get\-Median\-R\-G\-B} (\hyperlink{class___p_o_i_n_t}{\-\_\-\-P\-O\-I\-N\-T} \&input)
+\begin{DoxyCompactList}\small\item\em 기준 좌표를 중심으로 3 by 3내의 값중 중간 R\-G\-B값을 리턴 현재는 각 채널 별로 값을 뽑아서 조합하여 리턴하는 것으로 하고 있음. \end{DoxyCompactList}\item 
+R\-G\-B\-Q\-U\-A\-D \hyperlink{class_my_image_a454bd6266ccaa80824c25374bb49411b}{get\-Mean\-R\-G\-B} (\hyperlink{class___p_o_i_n_t}{\-\_\-\-P\-O\-I\-N\-T} \&input)
+\begin{DoxyCompactList}\small\item\em 기준 좌표를 중심으로 3 by 3내의 값중 평균 R\-G\-B값을 리턴 현재는 각 채널 별로 값을 뽑아서 조합하여 리턴하는 것으로 하고 있음. \end{DoxyCompactList}\item 
+double \hyperlink{class_my_image_a2ee075ed79cf8759bcaa5efa2e145ef5}{get\-Degree} (\hyperlink{class___p_o_i_n_t}{\-\_\-\-P\-O\-I\-N\-T} \&c, \hyperlink{class___p_o_i_n_t}{\-\_\-\-P\-O\-I\-N\-T} \&p)
+\begin{DoxyCompactList}\small\item\em 기준점 c와 점 p가 이루는 각을 동경(1, 0)을 기준으로 계산 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+Cx\-Image $\ast$ \hyperlink{class_my_image_a8ac6996526b9d73661c339db66680676}{image}
+\begin{DoxyCompactList}\small\item\em 이미지를 저장하기 위한 Cx\-Image \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+각종 영상처리 기법 구현 
+
+\begin{DoxyAuthor}{작성자}
+Jung Jinhong 
+\end{DoxyAuthor}
+\begin{DoxyDate}{날짜}
+2012-\/11-\/10 
+\end{DoxyDate}
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\hypertarget{class_my_image_adf236c5bf489ea412707c141ebff6376}{\index{My\-Image@{My\-Image}!My\-Image@{My\-Image}}
+\index{My\-Image@{My\-Image}!MyImage@{My\-Image}}
+\subsubsection[{My\-Image}]{\setlength{\rightskip}{0pt plus 5cm}My\-Image\-::\-My\-Image (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_my_image_adf236c5bf489ea412707c141ebff6376}
+기본 생성자 Cx\-Image에 동적할당은 하지만 아무 기능 수행 못함 \begin{DoxySeeAlso}{참고}
+\hyperlink{class_my_image_adf236c5bf489ea412707c141ebff6376}{My\-Image(void)} 
+
+\hyperlink{class_my_image_aec3a93c4c78cca085a42aa9feb303644}{My\-Image(\-Cx\-Image\& img)} 
+
+\hyperlink{class_my_image_abc4435c99ff10f1ad3545fdffbdb022d}{My\-Image(\-My\-Image\& m\-\_\-img)} 
+
+\hyperlink{class_my_image_aaa54440da34007183987415e3804a49f}{My\-Image(int width, int height, int wbpp)} 
+\end{DoxySeeAlso}
+\hypertarget{class_my_image_aec3a93c4c78cca085a42aa9feb303644}{\index{My\-Image@{My\-Image}!My\-Image@{My\-Image}}
+\index{My\-Image@{My\-Image}!MyImage@{My\-Image}}
+\subsubsection[{My\-Image}]{\setlength{\rightskip}{0pt plus 5cm}My\-Image\-::\-My\-Image (
+\begin{DoxyParamCaption}
+\item[{Cx\-Image \&}]{img}
+\end{DoxyParamCaption}
+)}}\label{class_my_image_aec3a93c4c78cca085a42aa9feb303644}
+Cx\-Image를 받아서 Copy하며 생성 \begin{DoxySeeAlso}{참고}
+\hyperlink{class_my_image_adf236c5bf489ea412707c141ebff6376}{My\-Image(void)} 
+
+\hyperlink{class_my_image_aec3a93c4c78cca085a42aa9feb303644}{My\-Image(\-Cx\-Image\& img)} 
+
+\hyperlink{class_my_image_abc4435c99ff10f1ad3545fdffbdb022d}{My\-Image(\-My\-Image\& m\-\_\-img)} 
+
+\hyperlink{class_my_image_aaa54440da34007183987415e3804a49f}{My\-Image(int width, int height, int wbpp)} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{매개변수}
+{\em img} & \-: 원본 Cx\-Image \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_my_image_abc4435c99ff10f1ad3545fdffbdb022d}{\index{My\-Image@{My\-Image}!My\-Image@{My\-Image}}
+\index{My\-Image@{My\-Image}!MyImage@{My\-Image}}
+\subsubsection[{My\-Image}]{\setlength{\rightskip}{0pt plus 5cm}My\-Image\-::\-My\-Image (
+\begin{DoxyParamCaption}
+\item[{{\bf My\-Image} \&}]{m\-\_\-img}
+\end{DoxyParamCaption}
+)}}\label{class_my_image_abc4435c99ff10f1ad3545fdffbdb022d}
+복사 생성자 \begin{DoxySeeAlso}{참고}
+\hyperlink{class_my_image_adf236c5bf489ea412707c141ebff6376}{My\-Image(void)} 
+
+\hyperlink{class_my_image_aec3a93c4c78cca085a42aa9feb303644}{My\-Image(\-Cx\-Image\& img)} 
+
+\hyperlink{class_my_image_abc4435c99ff10f1ad3545fdffbdb022d}{My\-Image(\-My\-Image\& m\-\_\-img)} 
+
+\hyperlink{class_my_image_aaa54440da34007183987415e3804a49f}{My\-Image(int width, int height, int wbpp)} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{매개변수}
+{\em m\-\_\-img} & \-: 원본 \hyperlink{class_my_image}{My\-Image} \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_my_image_aaa54440da34007183987415e3804a49f}{\index{My\-Image@{My\-Image}!My\-Image@{My\-Image}}
+\index{My\-Image@{My\-Image}!MyImage@{My\-Image}}
+\subsubsection[{My\-Image}]{\setlength{\rightskip}{0pt plus 5cm}My\-Image\-::\-My\-Image (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{wbpp}
+\end{DoxyParamCaption}
+)}}\label{class_my_image_aaa54440da34007183987415e3804a49f}
+새로운 Cx\-Image(width byheight)를 만든다. 
+\begin{DoxyParams}{매개변수}
+{\em width} & \-: 너비 (pixel) \\
+\hline
+{\em height} & \-: 높이 (piexl) \\
+\hline
+{\em wbbp} & \-: bbp \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{참고}
+\hyperlink{class_my_image_adf236c5bf489ea412707c141ebff6376}{My\-Image(void)} 
+
+\hyperlink{class_my_image_aec3a93c4c78cca085a42aa9feb303644}{My\-Image(\-Cx\-Image\& img)} 
+
+\hyperlink{class_my_image_abc4435c99ff10f1ad3545fdffbdb022d}{My\-Image(\-My\-Image\& m\-\_\-img)} 
+\end{DoxySeeAlso}
+\hypertarget{class_my_image_a3815977e82da79d45b56609bc448b3b4}{\index{My\-Image@{My\-Image}!$\sim$\-My\-Image@{$\sim$\-My\-Image}}
+\index{$\sim$\-My\-Image@{$\sim$\-My\-Image}!MyImage@{My\-Image}}
+\subsubsection[{$\sim$\-My\-Image}]{\setlength{\rightskip}{0pt plus 5cm}My\-Image\-::$\sim$\-My\-Image (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{class_my_image_a3815977e82da79d45b56609bc448b3b4}
+A destructor. 동적 할당 했던 Cx\-Image 해제 
+
+\subsection{멤버 함수 문서화}
+\hypertarget{class_my_image_a596dba2536ed1ae57835bf70fcfb1b69}{\index{My\-Image@{My\-Image}!bilinear\-Interpolation@{bilinear\-Interpolation}}
+\index{bilinear\-Interpolation@{bilinear\-Interpolation}!MyImage@{My\-Image}}
+\subsubsection[{bilinear\-Interpolation}]{\setlength{\rightskip}{0pt plus 5cm}R\-G\-B\-Q\-U\-A\-D My\-Image\-::bilinear\-Interpolation (
+\begin{DoxyParamCaption}
+\item[{{\bf \-\_\-\-P\-O\-I\-N\-T} \&}]{input}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_my_image_a596dba2536ed1ae57835bf70fcfb1b69}
+
+
+input에 대한 Inverse Mapping시 Bilinear Interpolation 방식으로 픽셀 값을 가져온다. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em input} & \-: Coordinate in destination image \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_my_image_ac513076c52619abd251d0e756e256c9a}{\index{My\-Image@{My\-Image}!Binarize\-Image@{Binarize\-Image}}
+\index{Binarize\-Image@{Binarize\-Image}!MyImage@{My\-Image}}
+\subsubsection[{Binarize\-Image}]{\setlength{\rightskip}{0pt plus 5cm}{\bf My\-Image} My\-Image\-::\-Binarize\-Image (
+\begin{DoxyParamCaption}
+\item[{int}]{threshold}
+\end{DoxyParamCaption}
+)}}\label{class_my_image_ac513076c52619abd251d0e756e256c9a}
+
+
+threshold 값을 기준으로 이진화한다. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em threshold} & \-: 기준값 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+Binarizied image 
+\end{DoxyReturn}
+\hypertarget{class_my_image_a7b7c78fb05bb1378e8ce2a24d8cd3920}{\index{My\-Image@{My\-Image}!calc\-Bilinear@{calc\-Bilinear}}
+\index{calc\-Bilinear@{calc\-Bilinear}!MyImage@{My\-Image}}
+\subsubsection[{calc\-Bilinear}]{\setlength{\rightskip}{0pt plus 5cm}int My\-Image\-::calc\-Bilinear (
+\begin{DoxyParamCaption}
+\item[{int}]{l, }
+\item[{int}]{k, }
+\item[{double}]{a, }
+\item[{double}]{b, }
+\item[{int}]{channel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_my_image_a7b7c78fb05bb1378e8ce2a24d8cd3920}
+
+
+Bilinear Interpolation을 위한 보조 계산 함수 
+
+\hypertarget{class_my_image_afec37177692c60c74d1dfba40c890642}{\index{My\-Image@{My\-Image}!calculate\-Mask@{calculate\-Mask}}
+\index{calculate\-Mask@{calculate\-Mask}!MyImage@{My\-Image}}
+\subsubsection[{calculate\-Mask}]{\setlength{\rightskip}{0pt plus 5cm}R\-G\-B\-Q\-U\-A\-D My\-Image\-::calculate\-Mask (
+\begin{DoxyParamCaption}
+\item[{const double}]{mask\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]}, }
+\item[{{\bf \-\_\-\-P\-O\-I\-N\-T} \&}]{input}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_my_image_afec37177692c60c74d1dfba40c890642}
+
+
+3 by 3 mask를 받아서 적용하고 계산 결과를 리턴 
+
+
+\begin{DoxyParams}{매개변수}
+{\em mask} & \-: 마스크 in x.\-h \\
+\hline
+{\em input} & \-: 기준 좌표 \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_my_image_af8815f475d86d16653e4295b94fba5af}{\index{My\-Image@{My\-Image}!get\-Channel\-Color@{get\-Channel\-Color}}
+\index{get\-Channel\-Color@{get\-Channel\-Color}!MyImage@{My\-Image}}
+\subsubsection[{get\-Channel\-Color}]{\setlength{\rightskip}{0pt plus 5cm}int My\-Image\-::get\-Channel\-Color (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{channel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_my_image_af8815f475d86d16653e4295b94fba5af}
+
+
+R\-G\-B중 하나의 채널에서 (x, y)의 픽셀 값을 리턴한다. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em x} & \-: x 좌표 \\
+\hline
+{\em y} & \-: y 좌표 \\
+\hline
+{\em channel} & \-: \hyperlink{function_8h_a5c71a5e59a53413cd6c270266d63b031}{R(0)}, \hyperlink{function_8h_aed9ea78689ecce0b7264c02c7f8a9a54}{G(1)}, \hyperlink{function_8h_a111da81ae5883147168bbb8366377b10}{B(2)} in \hyperlink{function_8h}{function.\-h} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{반환값}
+픽셀값(int, 0x00$\sim$0xff) 
+\end{DoxyReturn}
+\hypertarget{class_my_image_ac2f462436d7f711d457772ed961fa6d7}{\index{My\-Image@{My\-Image}!Get\-Cx\-Image@{Get\-Cx\-Image}}
+\index{Get\-Cx\-Image@{Get\-Cx\-Image}!MyImage@{My\-Image}}
+\subsubsection[{Get\-Cx\-Image}]{\setlength{\rightskip}{0pt plus 5cm}Cx\-Image $\ast$ My\-Image\-::\-Get\-Cx\-Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_my_image_ac2f462436d7f711d457772ed961fa6d7}
+
+
+Cx\-Image 포인터를 반환한다. 
+
+\hypertarget{class_my_image_a2ee075ed79cf8759bcaa5efa2e145ef5}{\index{My\-Image@{My\-Image}!get\-Degree@{get\-Degree}}
+\index{get\-Degree@{get\-Degree}!MyImage@{My\-Image}}
+\subsubsection[{get\-Degree}]{\setlength{\rightskip}{0pt plus 5cm}double My\-Image\-::get\-Degree (
+\begin{DoxyParamCaption}
+\item[{{\bf \-\_\-\-P\-O\-I\-N\-T} \&}]{c, }
+\item[{{\bf \-\_\-\-P\-O\-I\-N\-T} \&}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_my_image_a2ee075ed79cf8759bcaa5efa2e145ef5}
+
+
+기준점 c와 점 p가 이루는 각을 동경(1, 0)을 기준으로 계산 
+
+\begin{DoxyReturn}{반환값}
+0$\sim$360 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{매개변수}
+{\em c} & \-: 기준점 좌표 \\
+\hline
+{\em p} & \-: 점 좌표 \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_my_image_a67139f04c5ab4bb113874b7f3d10de3d}{\index{My\-Image@{My\-Image}!get\-Max\-R\-G\-B@{get\-Max\-R\-G\-B}}
+\index{get\-Max\-R\-G\-B@{get\-Max\-R\-G\-B}!MyImage@{My\-Image}}
+\subsubsection[{get\-Max\-R\-G\-B}]{\setlength{\rightskip}{0pt plus 5cm}R\-G\-B\-Q\-U\-A\-D My\-Image\-::get\-Max\-R\-G\-B (
+\begin{DoxyParamCaption}
+\item[{{\bf \-\_\-\-P\-O\-I\-N\-T} \&}]{input}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_my_image_a67139f04c5ab4bb113874b7f3d10de3d}
+
+
+기준 좌표를 중심으로 3 by 3내의 값중 가장 큰 것의 R\-G\-B값을 리턴 현재는 각 채널 별로 값을 뽑아서 조합하여 리턴하는 것으로 하고 있음. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em input} & \-: 기준 좌표 \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_my_image_a454bd6266ccaa80824c25374bb49411b}{\index{My\-Image@{My\-Image}!get\-Mean\-R\-G\-B@{get\-Mean\-R\-G\-B}}
+\index{get\-Mean\-R\-G\-B@{get\-Mean\-R\-G\-B}!MyImage@{My\-Image}}
+\subsubsection[{get\-Mean\-R\-G\-B}]{\setlength{\rightskip}{0pt plus 5cm}R\-G\-B\-Q\-U\-A\-D My\-Image\-::get\-Mean\-R\-G\-B (
+\begin{DoxyParamCaption}
+\item[{{\bf \-\_\-\-P\-O\-I\-N\-T} \&}]{input}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_my_image_a454bd6266ccaa80824c25374bb49411b}
+
+
+기준 좌표를 중심으로 3 by 3내의 값중 평균 R\-G\-B값을 리턴 현재는 각 채널 별로 값을 뽑아서 조합하여 리턴하는 것으로 하고 있음. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em input} & \-: 기준 좌표 \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_my_image_a2e9eda07e542c7d166a9b51df8f57d04}{\index{My\-Image@{My\-Image}!get\-Median\-R\-G\-B@{get\-Median\-R\-G\-B}}
+\index{get\-Median\-R\-G\-B@{get\-Median\-R\-G\-B}!MyImage@{My\-Image}}
+\subsubsection[{get\-Median\-R\-G\-B}]{\setlength{\rightskip}{0pt plus 5cm}R\-G\-B\-Q\-U\-A\-D My\-Image\-::get\-Median\-R\-G\-B (
+\begin{DoxyParamCaption}
+\item[{{\bf \-\_\-\-P\-O\-I\-N\-T} \&}]{input}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_my_image_a2e9eda07e542c7d166a9b51df8f57d04}
+
+
+기준 좌표를 중심으로 3 by 3내의 값중 중간 R\-G\-B값을 리턴 현재는 각 채널 별로 값을 뽑아서 조합하여 리턴하는 것으로 하고 있음. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em input} & \-: 기준 좌표 \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_my_image_abf923f02f9ff7fb47dd87e716f0afac9}{\index{My\-Image@{My\-Image}!get\-Min\-R\-G\-B@{get\-Min\-R\-G\-B}}
+\index{get\-Min\-R\-G\-B@{get\-Min\-R\-G\-B}!MyImage@{My\-Image}}
+\subsubsection[{get\-Min\-R\-G\-B}]{\setlength{\rightskip}{0pt plus 5cm}R\-G\-B\-Q\-U\-A\-D My\-Image\-::get\-Min\-R\-G\-B (
+\begin{DoxyParamCaption}
+\item[{{\bf \-\_\-\-P\-O\-I\-N\-T} \&}]{input}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_my_image_abf923f02f9ff7fb47dd87e716f0afac9}
+
+
+기준 좌표를 중심으로 3 by 3내의 값중 가장 작은 것의 R\-G\-B값을 리턴 현재는 각 채널 별로 값을 뽑아서 조합하여 리턴하는 것으로 하고 있음. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em input} & \-: 기준 좌표 \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_my_image_a0bd4058dece17b17c98fb0cf2786e61b}{\index{My\-Image@{My\-Image}!Gray\-Scale\-Image@{Gray\-Scale\-Image}}
+\index{Gray\-Scale\-Image@{Gray\-Scale\-Image}!MyImage@{My\-Image}}
+\subsubsection[{Gray\-Scale\-Image}]{\setlength{\rightskip}{0pt plus 5cm}{\bf My\-Image} My\-Image\-::\-Gray\-Scale\-Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_my_image_a0bd4058dece17b17c98fb0cf2786e61b}
+
+
+이미지를 Gray-\/\-Scale하여 반환한다. 
+
+\begin{DoxyReturn}{반환값}
+Gray-\/\-Scaled image. 
+\end{DoxyReturn}
+\hypertarget{class_my_image_af6c300627fcb08f1a1a54990c5abffd2}{\index{My\-Image@{My\-Image}!High\-Boost\-Filter\-Image@{High\-Boost\-Filter\-Image}}
+\index{High\-Boost\-Filter\-Image@{High\-Boost\-Filter\-Image}!MyImage@{My\-Image}}
+\subsubsection[{High\-Boost\-Filter\-Image}]{\setlength{\rightskip}{0pt plus 5cm}{\bf My\-Image} My\-Image\-::\-High\-Boost\-Filter\-Image (
+\begin{DoxyParamCaption}
+\item[{const double}]{A}
+\end{DoxyParamCaption}
+)}}\label{class_my_image_af6c300627fcb08f1a1a54990c5abffd2}
+
+
+선명화(\-Sharpening) 기법 \-: High-\/\-Boost Filter 
+
+\begin{DoxyReturn}{반환값}
+Filtered image by High-\/\-Boost 
+\end{DoxyReturn}
+High\-Boost Mask \hypertarget{class_my_image_adeb9f3c9a8e674d3170b13952d033329}{\index{My\-Image@{My\-Image}!Histogram\-Equalize\-Image@{Histogram\-Equalize\-Image}}
+\index{Histogram\-Equalize\-Image@{Histogram\-Equalize\-Image}!MyImage@{My\-Image}}
+\subsubsection[{Histogram\-Equalize\-Image}]{\setlength{\rightskip}{0pt plus 5cm}{\bf My\-Image} My\-Image\-::\-Histogram\-Equalize\-Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_my_image_adeb9f3c9a8e674d3170b13952d033329}
+
+
+Histogram Equalization을 수행하고 변환 영상을 리턴한다. 
+
+\begin{DoxyReturn}{반환값}
+Histogram Equalized image 
+\end{DoxyReturn}
+\hypertarget{class_my_image_ab1b09108047771667e6eea6974a1ba44}{\index{My\-Image@{My\-Image}!Inverse\-Image@{Inverse\-Image}}
+\index{Inverse\-Image@{Inverse\-Image}!MyImage@{My\-Image}}
+\subsubsection[{Inverse\-Image}]{\setlength{\rightskip}{0pt plus 5cm}{\bf My\-Image} My\-Image\-::\-Inverse\-Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_my_image_ab1b09108047771667e6eea6974a1ba44}
+
+
+이미지 색상을 반전시킨다. 
+
+\begin{DoxyReturn}{반환값}
+Inversed image 
+\end{DoxyReturn}
+\hypertarget{class_my_image_ac66955eba0161330746e7184c63b6a70}{\index{My\-Image@{My\-Image}!Laplacian\-Filter\-Image@{Laplacian\-Filter\-Image}}
+\index{Laplacian\-Filter\-Image@{Laplacian\-Filter\-Image}!MyImage@{My\-Image}}
+\subsubsection[{Laplacian\-Filter\-Image}]{\setlength{\rightskip}{0pt plus 5cm}{\bf My\-Image} My\-Image\-::\-Laplacian\-Filter\-Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_my_image_ac66955eba0161330746e7184c63b6a70}
+
+
+선명화(\-Sharpening) 기법 \-: Laplacian Filter 
+
+\begin{DoxyReturn}{반환값}
+Filtered image by Laplacian 
+\end{DoxyReturn}
+Laplacian Mask \hypertarget{class_my_image_af66f432007e738f823339d4687a218ad}{\index{My\-Image@{My\-Image}!Load@{Load}}
+\index{Load@{Load}!MyImage@{My\-Image}}
+\subsubsection[{Load}]{\setlength{\rightskip}{0pt plus 5cm}bool My\-Image\-::\-Load (
+\begin{DoxyParamCaption}
+\item[{L\-P\-C\-T\-S\-T\-R}]{lpsz\-Path\-Name}
+\end{DoxyParamCaption}
+)}}\label{class_my_image_af66f432007e738f823339d4687a218ad}
+
+
+lpsz\-Path\-Name의 이미지를 불러와 Cx\-Image에 Load한다. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em lpsz\-Path\-Name} & \-: 파일 경로 \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_my_image_a9c679fe0d1c067a40297ac805b02bfad}{\index{My\-Image@{My\-Image}!Max\-Filter\-Image@{Max\-Filter\-Image}}
+\index{Max\-Filter\-Image@{Max\-Filter\-Image}!MyImage@{My\-Image}}
+\subsubsection[{Max\-Filter\-Image}]{\setlength{\rightskip}{0pt plus 5cm}{\bf My\-Image} My\-Image\-::\-Max\-Filter\-Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_my_image_a9c679fe0d1c067a40297ac805b02bfad}
+
+
+Order-\/\-Statistics 기법 \-: Max Filter. 
+
+\begin{DoxyReturn}{반환값}
+Filtered image by Max 
+\end{DoxyReturn}
+\hypertarget{class_my_image_a2351ec80136c2ef0e44564443bcd95d6}{\index{My\-Image@{My\-Image}!Mean\-Filter\-Image@{Mean\-Filter\-Image}}
+\index{Mean\-Filter\-Image@{Mean\-Filter\-Image}!MyImage@{My\-Image}}
+\subsubsection[{Mean\-Filter\-Image}]{\setlength{\rightskip}{0pt plus 5cm}{\bf My\-Image} My\-Image\-::\-Mean\-Filter\-Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_my_image_a2351ec80136c2ef0e44564443bcd95d6}
+
+
+Order-\/\-Statistics 기법 \-: Mean Filter. 
+
+\begin{DoxyReturn}{반환값}
+Filtered image by Mean 
+\end{DoxyReturn}
+\hypertarget{class_my_image_a642496d4037beaf9da663b8d1ad783d9}{\index{My\-Image@{My\-Image}!Median\-Filter\-Image@{Median\-Filter\-Image}}
+\index{Median\-Filter\-Image@{Median\-Filter\-Image}!MyImage@{My\-Image}}
+\subsubsection[{Median\-Filter\-Image}]{\setlength{\rightskip}{0pt plus 5cm}{\bf My\-Image} My\-Image\-::\-Median\-Filter\-Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_my_image_a642496d4037beaf9da663b8d1ad783d9}
+
+
+Order-\/\-Statistics 기법 \-: Median Filter. 
+
+\begin{DoxyReturn}{반환값}
+Filtered image by Median 
+\end{DoxyReturn}
+\hypertarget{class_my_image_a258d1539f4841dd0c9f4453cd4b84b16}{\index{My\-Image@{My\-Image}!Min\-Filter\-Image@{Min\-Filter\-Image}}
+\index{Min\-Filter\-Image@{Min\-Filter\-Image}!MyImage@{My\-Image}}
+\subsubsection[{Min\-Filter\-Image}]{\setlength{\rightskip}{0pt plus 5cm}{\bf My\-Image} My\-Image\-::\-Min\-Filter\-Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_my_image_a258d1539f4841dd0c9f4453cd4b84b16}
+
+
+Order-\/\-Statistics 기법 \-: Min Filter. 
+
+\begin{DoxyReturn}{반환값}
+Filtered image by Min 
+\end{DoxyReturn}
+\hypertarget{class_my_image_a6deaa1ee63f0944648c18c75a6955ada}{\index{My\-Image@{My\-Image}!My\-R\-G\-B@{My\-R\-G\-B}}
+\index{My\-R\-G\-B@{My\-R\-G\-B}!MyImage@{My\-Image}}
+\subsubsection[{My\-R\-G\-B}]{\setlength{\rightskip}{0pt plus 5cm}R\-G\-B\-Q\-U\-A\-D My\-Image\-::\-My\-R\-G\-B (
+\begin{DoxyParamCaption}
+\item[{int}]{r, }
+\item[{int}]{g, }
+\item[{int}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_my_image_a6deaa1ee63f0944648c18c75a6955ada}
+
+
+각 채널의 픽셀값을 받아서 R\-G\-B\-Q\-U\-A\-D로 반환 
+
+
+\begin{DoxyParams}{매개변수}
+{\em r} & \-: R채널의 값(int, 0x00$\sim$0xff) \\
+\hline
+{\em g} & \-: G채널의 값(int, 0x00$\sim$0xff) \\
+\hline
+{\em b} & \-: B채널의 값(int, 0x00$\sim$0xff) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_my_image_aaaab34952da21ff0590b583b72ecc8cb}{\index{My\-Image@{My\-Image}!Power\-Law\-Image@{Power\-Law\-Image}}
+\index{Power\-Law\-Image@{Power\-Law\-Image}!MyImage@{My\-Image}}
+\subsubsection[{Power\-Law\-Image}]{\setlength{\rightskip}{0pt plus 5cm}{\bf My\-Image} My\-Image\-::\-Power\-Law\-Image (
+\begin{DoxyParamCaption}
+\item[{double}]{t}
+\end{DoxyParamCaption}
+)}}\label{class_my_image_aaaab34952da21ff0590b583b72ecc8cb}
+
+
+지수승 t로 power-\/law를 적용한다. 
+
+\begin{DoxyReturn}{반환값}
+Power-\/\-Lawed image 
+\end{DoxyReturn}
+\hypertarget{class_my_image_abaa46d41275dcfed4295c9da48be6c9e}{\index{My\-Image@{My\-Image}!Scale\-Image@{Scale\-Image}}
+\index{Scale\-Image@{Scale\-Image}!MyImage@{My\-Image}}
+\subsubsection[{Scale\-Image}]{\setlength{\rightskip}{0pt plus 5cm}{\bf My\-Image} My\-Image\-::\-Scale\-Image (
+\begin{DoxyParamCaption}
+\item[{double}]{w, }
+\item[{double}]{h}
+\end{DoxyParamCaption}
+)}}\label{class_my_image_abaa46d41275dcfed4295c9da48be6c9e}
+
+
+이미지를 가로 w배, 세로 h배 Scale(확대/축소)한다. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em w} & \-: 가로 비율 \\
+\hline
+{\em h} & \-: 세로 비율 \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_my_image_ad7944b144f9744e17051878b4b50c951}{\index{My\-Image@{My\-Image}!Smoothing\-Linear\-Filter\-Image@{Smoothing\-Linear\-Filter\-Image}}
+\index{Smoothing\-Linear\-Filter\-Image@{Smoothing\-Linear\-Filter\-Image}!MyImage@{My\-Image}}
+\subsubsection[{Smoothing\-Linear\-Filter\-Image}]{\setlength{\rightskip}{0pt plus 5cm}{\bf My\-Image} My\-Image\-::\-Smoothing\-Linear\-Filter\-Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_my_image_ad7944b144f9744e17051878b4b50c951}
+
+
+평활화(\-Smoothing) 기법 \-: Linear Filter 
+
+\begin{DoxyReturn}{반환값}
+Filtered image by Linear 
+\end{DoxyReturn}
+\hypertarget{class_my_image_aae9305b240652af26a79862f2b21f0e1}{\index{My\-Image@{My\-Image}!Sobel\-Filter\-Image@{Sobel\-Filter\-Image}}
+\index{Sobel\-Filter\-Image@{Sobel\-Filter\-Image}!MyImage@{My\-Image}}
+\subsubsection[{Sobel\-Filter\-Image}]{\setlength{\rightskip}{0pt plus 5cm}{\bf My\-Image} My\-Image\-::\-Sobel\-Filter\-Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_my_image_aae9305b240652af26a79862f2b21f0e1}
+
+
+선명화(\-Sharpening) 기법 \-: Sobel Filter 
+
+\begin{DoxyReturn}{반환값}
+Filtered image by Sobel 
+\end{DoxyReturn}
+\hypertarget{class_my_image_a12bac49a024e6c9089a88adb6edca6e1}{\index{My\-Image@{My\-Image}!transform@{transform}}
+\index{transform@{transform}!MyImage@{My\-Image}}
+\subsubsection[{transform}]{\setlength{\rightskip}{0pt plus 5cm}void My\-Image\-::transform (
+\begin{DoxyParamCaption}
+\item[{{\bf My\-Image} \&}]{new\-Image, }
+\item[{{\bf M\-A\-T\-R\-I\-X3\-D} \&}]{mat}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_my_image_a12bac49a024e6c9089a88adb6edca6e1}
+
+
+현재 이미지를 Trasform계수(3차원 행렬)에 의해 변형하여 new\-Image에 저장한다. 내부적으로 Affine\-Transform를 수행한다. 
+
+
+\begin{DoxyParams}{매개변수}
+{\em new\-Image} & \-: 변형된 이미지를 저장 \\
+\hline
+{\em mat} & \-: Transform계수, Forward Mapping으로 넘겨준다. -\/ 주로 쓰이는 것은 따로 정의해야함 \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_my_image_aa53e9b0fa696a4de66da49b13b9afd48}{\index{My\-Image@{My\-Image}!Transform\-Into\-Cartecian@{Transform\-Into\-Cartecian}}
+\index{Transform\-Into\-Cartecian@{Transform\-Into\-Cartecian}!MyImage@{My\-Image}}
+\subsubsection[{Transform\-Into\-Cartecian}]{\setlength{\rightskip}{0pt plus 5cm}{\bf My\-Image} My\-Image\-::\-Transform\-Into\-Cartecian (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_my_image_aa53e9b0fa696a4de66da49b13b9afd48}
+
+
+총 크기 r/root(2) by r/root(2)이고 (r/root(2), r/root(2))이 중심인 직각좌표계로 변환한 이미지를 반환한다. r은 이미지의 height이다. 
+
+\begin{DoxyReturn}{반환값}
+image in Cartecian-\/coordination 
+\end{DoxyReturn}
+\hypertarget{class_my_image_a0bf6e1069067a1e6ac8d9fb6f9e4e16e}{\index{My\-Image@{My\-Image}!Transform\-Into\-Polar@{Transform\-Into\-Polar}}
+\index{Transform\-Into\-Polar@{Transform\-Into\-Polar}!MyImage@{My\-Image}}
+\subsubsection[{Transform\-Into\-Polar}]{\setlength{\rightskip}{0pt plus 5cm}{\bf My\-Image} My\-Image\-::\-Transform\-Into\-Polar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_my_image_a0bf6e1069067a1e6ac8d9fb6f9e4e16e}
+
+
+영상의 중점을 중심으로 극좌표계(r, theta)로 변환한 이미지를 반환한다. 정사각형 이미지만 들어온다고 가정한다. 
+
+\begin{DoxyReturn}{반환값}
+image in Polar-\/coordination 
+\end{DoxyReturn}
+
+
+\subsection{멤버 데이타 문서화}
+\hypertarget{class_my_image_a8ac6996526b9d73661c339db66680676}{\index{My\-Image@{My\-Image}!image@{image}}
+\index{image@{image}!MyImage@{My\-Image}}
+\subsubsection[{image}]{\setlength{\rightskip}{0pt plus 5cm}Cx\-Image$\ast$ My\-Image\-::image\hspace{0.3cm}{\ttfamily [private]}}}\label{class_my_image_a8ac6996526b9d73661c339db66680676}
+
+
+이미지를 저장하기 위한 Cx\-Image 
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\-:\begin{DoxyCompactItemize}
+\item 
+My\-Image\-Processing/\hyperlink{_my_image_8h}{My\-Image.\-h}\item 
+My\-Image\-Processing/\hyperlink{_my_image_8cpp}{My\-Image.\-cpp}\end{DoxyCompactItemize}

@@ -110,9 +110,12 @@
     <ClInclude Include="HBDlg.h" />
     <ClInclude Include="HistDlg.h" />
     <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="matrix.h" />
+    <ClInclude Include="MyImage.h" />
     <ClInclude Include="MyImageProcessing.h" />
     <ClInclude Include="MyImageProcessingDoc.h" />
     <ClInclude Include="MyImageProcessingView.h" />
+    <ClInclude Include="PowDlg.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="SclDlg.h" />
     <ClInclude Include="stdafx.h" />
@@ -121,12 +124,15 @@
   <ItemGroup>
     <ClCompile Include="BinthSet.cpp" />
     <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="function.cpp" />
     <ClCompile Include="HBDlg.cpp" />
     <ClCompile Include="HistDlg.cpp" />
     <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="MyImage.cpp" />
     <ClCompile Include="MyImageProcessing.cpp" />
     <ClCompile Include="MyImageProcessingDoc.cpp" />
     <ClCompile Include="MyImageProcessingView.cpp" />
+    <ClCompile Include="PowDlg.cpp" />
     <ClCompile Include="SclDlg.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

@@ -1,0 +1,132 @@
+\hypertarget{class_m_a_t_r_i_x2_d}{\section{M\-A\-T\-R\-I\-X2\-D 클래스 참조}
+\label{class_m_a_t_r_i_x2_d}\index{M\-A\-T\-R\-I\-X2\-D@{M\-A\-T\-R\-I\-X2\-D}}
+}
+
+
+{\ttfamily \#include $<$matrix.\-h$>$}
+
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_m_a_t_r_i_x2_d_a34e47a9c3d3006372f43d1f593a253df}{M\-A\-T\-R\-I\-X2\-D} ()
+\begin{DoxyCompactList}\small\item\em 2차원 행렬 표현 \end{DoxyCompactList}\item 
+\hyperlink{class_m_a_t_r_i_x2_d_a47149410e6e90d06ceb211eec22ee822}{M\-A\-T\-R\-I\-X2\-D} (\hyperlink{class_m_a_t_r_i_x2_d}{M\-A\-T\-R\-I\-X2\-D} \&mat)
+\begin{DoxyCompactList}\small\item\em copy constructor \end{DoxyCompactList}\item 
+\hyperlink{class_m_a_t_r_i_x2_d_aacd4a6b2603c7d34c08da1ddf118ab19}{M\-A\-T\-R\-I\-X2\-D} (double \hyperlink{class_m_a_t_r_i_x2_d_a4ae1e61f3b886f9b3ce346f6d54de973}{a}\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]})
+\item 
+\hyperlink{class_m_a_t_r_i_x2_d_a5b4703886bd5d30d4bc47fff85488b04}{M\-A\-T\-R\-I\-X2\-D} (double t\mbox{[}$\,$\mbox{]}, int n)
+\begin{DoxyCompactList}\small\item\em double형 1차원 배열을 2차원 행렬화 \end{DoxyCompactList}\item 
+double \hyperlink{class_m_a_t_r_i_x2_d_a0c4cad4dbb6ad4a5a560d4c9876cd071}{get\-Det} ()
+\item 
+bool \hyperlink{class_m_a_t_r_i_x2_d_ae5018742fa0dfa84dbb2466c0789bdcd}{is\-Inversible} ()
+\begin{DoxyCompactList}\small\item\em Inverse 가능 여부, Det가 0이면 false. \end{DoxyCompactList}\item 
+\hyperlink{class_m_a_t_r_i_x2_d}{M\-A\-T\-R\-I\-X2\-D} \hyperlink{class_m_a_t_r_i_x2_d_a8593d4fd11d45ea256047900ebc77307}{inverse} ()
+\begin{DoxyCompactList}\small\item\em this의 역행렬을 구해 반환 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_m_a_t_r_i_x2_d_a4ae1e61f3b886f9b3ce346f6d54de973}{a} \mbox{[}2\mbox{]}\mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em 행렬 원소 (2$\ast$2) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\hypertarget{class_m_a_t_r_i_x2_d_a34e47a9c3d3006372f43d1f593a253df}{\index{M\-A\-T\-R\-I\-X2\-D@{M\-A\-T\-R\-I\-X2\-D}!M\-A\-T\-R\-I\-X2\-D@{M\-A\-T\-R\-I\-X2\-D}}
+\index{M\-A\-T\-R\-I\-X2\-D@{M\-A\-T\-R\-I\-X2\-D}!MATRIX2D@{M\-A\-T\-R\-I\-X2\-D}}
+\subsubsection[{M\-A\-T\-R\-I\-X2\-D}]{\setlength{\rightskip}{0pt plus 5cm}M\-A\-T\-R\-I\-X2\-D\-::\-M\-A\-T\-R\-I\-X2\-D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_m_a_t_r_i_x2_d_a34e47a9c3d3006372f43d1f593a253df}
+
+
+2차원 행렬 표현 
+
+\hypertarget{class_m_a_t_r_i_x2_d_a47149410e6e90d06ceb211eec22ee822}{\index{M\-A\-T\-R\-I\-X2\-D@{M\-A\-T\-R\-I\-X2\-D}!M\-A\-T\-R\-I\-X2\-D@{M\-A\-T\-R\-I\-X2\-D}}
+\index{M\-A\-T\-R\-I\-X2\-D@{M\-A\-T\-R\-I\-X2\-D}!MATRIX2D@{M\-A\-T\-R\-I\-X2\-D}}
+\subsubsection[{M\-A\-T\-R\-I\-X2\-D}]{\setlength{\rightskip}{0pt plus 5cm}M\-A\-T\-R\-I\-X2\-D\-::\-M\-A\-T\-R\-I\-X2\-D (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-A\-T\-R\-I\-X2\-D} \&}]{mat}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_m_a_t_r_i_x2_d_a47149410e6e90d06ceb211eec22ee822}
+
+
+copy constructor 
+
+\hypertarget{class_m_a_t_r_i_x2_d_aacd4a6b2603c7d34c08da1ddf118ab19}{\index{M\-A\-T\-R\-I\-X2\-D@{M\-A\-T\-R\-I\-X2\-D}!M\-A\-T\-R\-I\-X2\-D@{M\-A\-T\-R\-I\-X2\-D}}
+\index{M\-A\-T\-R\-I\-X2\-D@{M\-A\-T\-R\-I\-X2\-D}!MATRIX2D@{M\-A\-T\-R\-I\-X2\-D}}
+\subsubsection[{M\-A\-T\-R\-I\-X2\-D}]{\setlength{\rightskip}{0pt plus 5cm}M\-A\-T\-R\-I\-X2\-D\-::\-M\-A\-T\-R\-I\-X2\-D (
+\begin{DoxyParamCaption}
+\item[{double}]{a\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_m_a_t_r_i_x2_d_aacd4a6b2603c7d34c08da1ddf118ab19}
+double형 2차원 배열을 행렬화 
+\begin{DoxyParams}{매개변수}
+{\em a} & \-: 2차원 배열 (2 $\ast$ 2) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_m_a_t_r_i_x2_d_a5b4703886bd5d30d4bc47fff85488b04}{\index{M\-A\-T\-R\-I\-X2\-D@{M\-A\-T\-R\-I\-X2\-D}!M\-A\-T\-R\-I\-X2\-D@{M\-A\-T\-R\-I\-X2\-D}}
+\index{M\-A\-T\-R\-I\-X2\-D@{M\-A\-T\-R\-I\-X2\-D}!MATRIX2D@{M\-A\-T\-R\-I\-X2\-D}}
+\subsubsection[{M\-A\-T\-R\-I\-X2\-D}]{\setlength{\rightskip}{0pt plus 5cm}M\-A\-T\-R\-I\-X2\-D\-::\-M\-A\-T\-R\-I\-X2\-D (
+\begin{DoxyParamCaption}
+\item[{double}]{t\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_m_a_t_r_i_x2_d_a5b4703886bd5d30d4bc47fff85488b04}
+
+
+double형 1차원 배열을 2차원 행렬화 
+
+
+\begin{DoxyParams}{매개변수}
+{\em t} & \-: 1차원 배열 (1 $\ast$ 4) \\
+\hline
+{\em n} & \-: 크기(must be 4) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{멤버 함수 문서화}
+\hypertarget{class_m_a_t_r_i_x2_d_a0c4cad4dbb6ad4a5a560d4c9876cd071}{\index{M\-A\-T\-R\-I\-X2\-D@{M\-A\-T\-R\-I\-X2\-D}!get\-Det@{get\-Det}}
+\index{get\-Det@{get\-Det}!MATRIX2D@{M\-A\-T\-R\-I\-X2\-D}}
+\subsubsection[{get\-Det}]{\setlength{\rightskip}{0pt plus 5cm}double M\-A\-T\-R\-I\-X2\-D\-::get\-Det (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_m_a_t_r_i_x2_d_a0c4cad4dbb6ad4a5a560d4c9876cd071}
+get Determinant \hypertarget{class_m_a_t_r_i_x2_d_a8593d4fd11d45ea256047900ebc77307}{\index{M\-A\-T\-R\-I\-X2\-D@{M\-A\-T\-R\-I\-X2\-D}!inverse@{inverse}}
+\index{inverse@{inverse}!MATRIX2D@{M\-A\-T\-R\-I\-X2\-D}}
+\subsubsection[{inverse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\-A\-T\-R\-I\-X2\-D} M\-A\-T\-R\-I\-X2\-D\-::inverse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_m_a_t_r_i_x2_d_a8593d4fd11d45ea256047900ebc77307}
+
+
+this의 역행렬을 구해 반환 
+
+\hypertarget{class_m_a_t_r_i_x2_d_ae5018742fa0dfa84dbb2466c0789bdcd}{\index{M\-A\-T\-R\-I\-X2\-D@{M\-A\-T\-R\-I\-X2\-D}!is\-Inversible@{is\-Inversible}}
+\index{is\-Inversible@{is\-Inversible}!MATRIX2D@{M\-A\-T\-R\-I\-X2\-D}}
+\subsubsection[{is\-Inversible}]{\setlength{\rightskip}{0pt plus 5cm}bool M\-A\-T\-R\-I\-X2\-D\-::is\-Inversible (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_m_a_t_r_i_x2_d_ae5018742fa0dfa84dbb2466c0789bdcd}
+
+
+Inverse 가능 여부, Det가 0이면 false. 
+
+
+
+\subsection{멤버 데이타 문서화}
+\hypertarget{class_m_a_t_r_i_x2_d_a4ae1e61f3b886f9b3ce346f6d54de973}{\index{M\-A\-T\-R\-I\-X2\-D@{M\-A\-T\-R\-I\-X2\-D}!a@{a}}
+\index{a@{a}!MATRIX2D@{M\-A\-T\-R\-I\-X2\-D}}
+\subsubsection[{a}]{\setlength{\rightskip}{0pt plus 5cm}double M\-A\-T\-R\-I\-X2\-D\-::a\mbox{[}2\mbox{]}\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}}\label{class_m_a_t_r_i_x2_d_a4ae1e61f3b886f9b3ce346f6d54de973}
+
+
+행렬 원소 (2$\ast$2) 
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\-:\begin{DoxyCompactItemize}
+\item 
+My\-Image\-Processing/\hyperlink{matrix_8h}{matrix.\-h}\end{DoxyCompactItemize}

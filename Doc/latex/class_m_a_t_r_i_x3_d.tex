@@ -1,0 +1,195 @@
+\hypertarget{class_m_a_t_r_i_x3_d}{\section{M\-A\-T\-R\-I\-X3\-D 클래스 참조}
+\label{class_m_a_t_r_i_x3_d}\index{M\-A\-T\-R\-I\-X3\-D@{M\-A\-T\-R\-I\-X3\-D}}
+}
+
+
+{\ttfamily \#include $<$matrix.\-h$>$}
+
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_m_a_t_r_i_x3_d_a85e81a995201846d602ab80f502626e6}{M\-A\-T\-R\-I\-X3\-D} ()
+\begin{DoxyCompactList}\small\item\em 3차원 행렬 표현 \end{DoxyCompactList}\item 
+\hyperlink{class_m_a_t_r_i_x3_d_a464aa49f42a93b7ec7af34cad6db379f}{M\-A\-T\-R\-I\-X3\-D} (\hyperlink{class_m_a_t_r_i_x3_d}{M\-A\-T\-R\-I\-X3\-D} \&mat)
+\begin{DoxyCompactList}\small\item\em copy constructor, calculate determinant in advance. \end{DoxyCompactList}\item 
+\hyperlink{class_m_a_t_r_i_x3_d_a767e7bb59466d96793b89a7f2db0a1a4}{M\-A\-T\-R\-I\-X3\-D} (double a\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]})
+\item 
+bool \hyperlink{class_m_a_t_r_i_x3_d_ae04bbddf00d6572e12b67eb9a0d6d55f}{is\-Inversible} ()
+\begin{DoxyCompactList}\small\item\em Inverse 가능 여부, Det가 0이면 false. \end{DoxyCompactList}\item 
+double \hyperlink{class_m_a_t_r_i_x3_d_ab9708baa5af2ffe980632870e88c1559}{get\-Det} ()
+\item 
+double \hyperlink{class_m_a_t_r_i_x3_d_a23292251c50eab390168914069cefc0e}{get\-Cofactor} (int \-\_\-i, int \-\_\-j)
+\item 
+void \hyperlink{class_m_a_t_r_i_x3_d_ac3e4b69526d21abcc0db1ddd1718b6a8}{set} (int i, int j, double v)
+\item 
+double \hyperlink{class_m_a_t_r_i_x3_d_a215a4ab44606797cd7f2b1551cd05431}{get} (int i, int j)
+\item 
+\hyperlink{class_m_a_t_r_i_x3_d}{M\-A\-T\-R\-I\-X3\-D} \hyperlink{class_m_a_t_r_i_x3_d_a4133adf628205e22c49d420d80f4336e}{inverse} ()
+\item 
+\hyperlink{class___p_o_i_n_t}{\-\_\-\-P\-O\-I\-N\-T} \hyperlink{class_m_a_t_r_i_x3_d_a9c5556589092317bb63fbb8b681035ab}{Affine\-Transform} (\hyperlink{class___p_o_i_n_t}{\-\_\-\-P\-O\-I\-N\-T} \&input)
+\end{DoxyCompactItemize}
+\subsection*{Private 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{class_m_a_t_r_i_x3_d_a81930ff56a1e199b2d3e606f27ed0a29}{calc\-Det} ()
+\begin{DoxyCompactList}\small\item\em 판별식을 계산하기 위한 함수 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private 속성}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_m_a_t_r_i_x3_d_ab951cbc695222c9cd96d1f2990b1a662}{det\-\_\-flag}
+\begin{DoxyCompactList}\small\item\em Determinant 계산 여부, 미리 계산하기 위함 \end{DoxyCompactList}\item 
+bool \hyperlink{class_m_a_t_r_i_x3_d_a3d3bd9c2ee0c213ca2f69804c3db6ac6}{is\-Set}
+\begin{DoxyCompactList}\small\item\em 행렬의 값이 설정되었는지 여부 \end{DoxyCompactList}\item 
+double \hyperlink{class_m_a_t_r_i_x3_d_ad46f057c72ed680b5d94f7b168908fc9}{A} \mbox{[}3\mbox{]}\mbox{[}3\mbox{]}
+\begin{DoxyCompactList}\small\item\em 실제 행렬 값 \end{DoxyCompactList}\item 
+double \hyperlink{class_m_a_t_r_i_x3_d_a836b104900b7c16a92bda6e41612a77d}{det}
+\begin{DoxyCompactList}\small\item\em Determinant. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\hypertarget{class_m_a_t_r_i_x3_d_a85e81a995201846d602ab80f502626e6}{\index{M\-A\-T\-R\-I\-X3\-D@{M\-A\-T\-R\-I\-X3\-D}!M\-A\-T\-R\-I\-X3\-D@{M\-A\-T\-R\-I\-X3\-D}}
+\index{M\-A\-T\-R\-I\-X3\-D@{M\-A\-T\-R\-I\-X3\-D}!MATRIX3D@{M\-A\-T\-R\-I\-X3\-D}}
+\subsubsection[{M\-A\-T\-R\-I\-X3\-D}]{\setlength{\rightskip}{0pt plus 5cm}M\-A\-T\-R\-I\-X3\-D\-::\-M\-A\-T\-R\-I\-X3\-D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_m_a_t_r_i_x3_d_a85e81a995201846d602ab80f502626e6}
+
+
+3차원 행렬 표현 
+
+\hypertarget{class_m_a_t_r_i_x3_d_a464aa49f42a93b7ec7af34cad6db379f}{\index{M\-A\-T\-R\-I\-X3\-D@{M\-A\-T\-R\-I\-X3\-D}!M\-A\-T\-R\-I\-X3\-D@{M\-A\-T\-R\-I\-X3\-D}}
+\index{M\-A\-T\-R\-I\-X3\-D@{M\-A\-T\-R\-I\-X3\-D}!MATRIX3D@{M\-A\-T\-R\-I\-X3\-D}}
+\subsubsection[{M\-A\-T\-R\-I\-X3\-D}]{\setlength{\rightskip}{0pt plus 5cm}M\-A\-T\-R\-I\-X3\-D\-::\-M\-A\-T\-R\-I\-X3\-D (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-A\-T\-R\-I\-X3\-D} \&}]{mat}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_m_a_t_r_i_x3_d_a464aa49f42a93b7ec7af34cad6db379f}
+
+
+copy constructor, calculate determinant in advance. 
+
+\hypertarget{class_m_a_t_r_i_x3_d_a767e7bb59466d96793b89a7f2db0a1a4}{\index{M\-A\-T\-R\-I\-X3\-D@{M\-A\-T\-R\-I\-X3\-D}!M\-A\-T\-R\-I\-X3\-D@{M\-A\-T\-R\-I\-X3\-D}}
+\index{M\-A\-T\-R\-I\-X3\-D@{M\-A\-T\-R\-I\-X3\-D}!MATRIX3D@{M\-A\-T\-R\-I\-X3\-D}}
+\subsubsection[{M\-A\-T\-R\-I\-X3\-D}]{\setlength{\rightskip}{0pt plus 5cm}M\-A\-T\-R\-I\-X3\-D\-::\-M\-A\-T\-R\-I\-X3\-D (
+\begin{DoxyParamCaption}
+\item[{double}]{a\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_m_a_t_r_i_x3_d_a767e7bb59466d96793b89a7f2db0a1a4}
+double형 3차원 배열을 행렬화 
+\begin{DoxyParams}{매개변수}
+{\em a} & \-: 3차원 배열 (3 $\ast$ 3) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{멤버 함수 문서화}
+\hypertarget{class_m_a_t_r_i_x3_d_a9c5556589092317bb63fbb8b681035ab}{\index{M\-A\-T\-R\-I\-X3\-D@{M\-A\-T\-R\-I\-X3\-D}!Affine\-Transform@{Affine\-Transform}}
+\index{Affine\-Transform@{Affine\-Transform}!MATRIX3D@{M\-A\-T\-R\-I\-X3\-D}}
+\subsubsection[{Affine\-Transform}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-\_\-\-P\-O\-I\-N\-T} M\-A\-T\-R\-I\-X3\-D\-::\-Affine\-Transform (
+\begin{DoxyParamCaption}
+\item[{{\bf \-\_\-\-P\-O\-I\-N\-T} \&}]{input}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_m_a_t_r_i_x3_d_a9c5556589092317bb63fbb8b681035ab}
+입력으로 들어오는 좌표에 대해서 Affine\-Transform을 수행하여 변환된 좌표를 리턴한다. 
+\begin{DoxyParams}{매개변수}
+{\em input} & \-: 변형되기 원하는 좌표 \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_m_a_t_r_i_x3_d_a81930ff56a1e199b2d3e606f27ed0a29}{\index{M\-A\-T\-R\-I\-X3\-D@{M\-A\-T\-R\-I\-X3\-D}!calc\-Det@{calc\-Det}}
+\index{calc\-Det@{calc\-Det}!MATRIX3D@{M\-A\-T\-R\-I\-X3\-D}}
+\subsubsection[{calc\-Det}]{\setlength{\rightskip}{0pt plus 5cm}double M\-A\-T\-R\-I\-X3\-D\-::calc\-Det (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}}\label{class_m_a_t_r_i_x3_d_a81930ff56a1e199b2d3e606f27ed0a29}
+
+
+판별식을 계산하기 위한 함수 
+
+\hypertarget{class_m_a_t_r_i_x3_d_a215a4ab44606797cd7f2b1551cd05431}{\index{M\-A\-T\-R\-I\-X3\-D@{M\-A\-T\-R\-I\-X3\-D}!get@{get}}
+\index{get@{get}!MATRIX3D@{M\-A\-T\-R\-I\-X3\-D}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}double M\-A\-T\-R\-I\-X3\-D\-::get (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_m_a_t_r_i_x3_d_a215a4ab44606797cd7f2b1551cd05431}
+get an element of (i , j) in this Matrix \hypertarget{class_m_a_t_r_i_x3_d_a23292251c50eab390168914069cefc0e}{\index{M\-A\-T\-R\-I\-X3\-D@{M\-A\-T\-R\-I\-X3\-D}!get\-Cofactor@{get\-Cofactor}}
+\index{get\-Cofactor@{get\-Cofactor}!MATRIX3D@{M\-A\-T\-R\-I\-X3\-D}}
+\subsubsection[{get\-Cofactor}]{\setlength{\rightskip}{0pt plus 5cm}double M\-A\-T\-R\-I\-X3\-D\-::get\-Cofactor (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-i, }
+\item[{int}]{\-\_\-j}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_m_a_t_r_i_x3_d_a23292251c50eab390168914069cefc0e}
+get cofactor of (\-\_\-i, \-\_\-j) \hypertarget{class_m_a_t_r_i_x3_d_ab9708baa5af2ffe980632870e88c1559}{\index{M\-A\-T\-R\-I\-X3\-D@{M\-A\-T\-R\-I\-X3\-D}!get\-Det@{get\-Det}}
+\index{get\-Det@{get\-Det}!MATRIX3D@{M\-A\-T\-R\-I\-X3\-D}}
+\subsubsection[{get\-Det}]{\setlength{\rightskip}{0pt plus 5cm}double M\-A\-T\-R\-I\-X3\-D\-::get\-Det (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_m_a_t_r_i_x3_d_ab9708baa5af2ffe980632870e88c1559}
+get Determinant \hypertarget{class_m_a_t_r_i_x3_d_a4133adf628205e22c49d420d80f4336e}{\index{M\-A\-T\-R\-I\-X3\-D@{M\-A\-T\-R\-I\-X3\-D}!inverse@{inverse}}
+\index{inverse@{inverse}!MATRIX3D@{M\-A\-T\-R\-I\-X3\-D}}
+\subsubsection[{inverse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\-A\-T\-R\-I\-X3\-D} M\-A\-T\-R\-I\-X3\-D\-::inverse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_m_a_t_r_i_x3_d_a4133adf628205e22c49d420d80f4336e}
+역행렬을 구해 리턴 \hypertarget{class_m_a_t_r_i_x3_d_ae04bbddf00d6572e12b67eb9a0d6d55f}{\index{M\-A\-T\-R\-I\-X3\-D@{M\-A\-T\-R\-I\-X3\-D}!is\-Inversible@{is\-Inversible}}
+\index{is\-Inversible@{is\-Inversible}!MATRIX3D@{M\-A\-T\-R\-I\-X3\-D}}
+\subsubsection[{is\-Inversible}]{\setlength{\rightskip}{0pt plus 5cm}bool M\-A\-T\-R\-I\-X3\-D\-::is\-Inversible (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_m_a_t_r_i_x3_d_ae04bbddf00d6572e12b67eb9a0d6d55f}
+
+
+Inverse 가능 여부, Det가 0이면 false. 
+
+\hypertarget{class_m_a_t_r_i_x3_d_ac3e4b69526d21abcc0db1ddd1718b6a8}{\index{M\-A\-T\-R\-I\-X3\-D@{M\-A\-T\-R\-I\-X3\-D}!set@{set}}
+\index{set@{set}!MATRIX3D@{M\-A\-T\-R\-I\-X3\-D}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}void M\-A\-T\-R\-I\-X3\-D\-::set (
+\begin{DoxyParamCaption}
+\item[{int}]{i, }
+\item[{int}]{j, }
+\item[{double}]{v}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_m_a_t_r_i_x3_d_ac3e4b69526d21abcc0db1ddd1718b6a8}
+
+
+\subsection{멤버 데이타 문서화}
+\hypertarget{class_m_a_t_r_i_x3_d_ad46f057c72ed680b5d94f7b168908fc9}{\index{M\-A\-T\-R\-I\-X3\-D@{M\-A\-T\-R\-I\-X3\-D}!A@{A}}
+\index{A@{A}!MATRIX3D@{M\-A\-T\-R\-I\-X3\-D}}
+\subsubsection[{A}]{\setlength{\rightskip}{0pt plus 5cm}double M\-A\-T\-R\-I\-X3\-D\-::\-A\mbox{[}3\mbox{]}\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}}\label{class_m_a_t_r_i_x3_d_ad46f057c72ed680b5d94f7b168908fc9}
+
+
+실제 행렬 값 
+
+\hypertarget{class_m_a_t_r_i_x3_d_a836b104900b7c16a92bda6e41612a77d}{\index{M\-A\-T\-R\-I\-X3\-D@{M\-A\-T\-R\-I\-X3\-D}!det@{det}}
+\index{det@{det}!MATRIX3D@{M\-A\-T\-R\-I\-X3\-D}}
+\subsubsection[{det}]{\setlength{\rightskip}{0pt plus 5cm}double M\-A\-T\-R\-I\-X3\-D\-::det\hspace{0.3cm}{\ttfamily [private]}}}\label{class_m_a_t_r_i_x3_d_a836b104900b7c16a92bda6e41612a77d}
+
+
+Determinant. 
+
+\hypertarget{class_m_a_t_r_i_x3_d_ab951cbc695222c9cd96d1f2990b1a662}{\index{M\-A\-T\-R\-I\-X3\-D@{M\-A\-T\-R\-I\-X3\-D}!det\-\_\-flag@{det\-\_\-flag}}
+\index{det\-\_\-flag@{det\-\_\-flag}!MATRIX3D@{M\-A\-T\-R\-I\-X3\-D}}
+\subsubsection[{det\-\_\-flag}]{\setlength{\rightskip}{0pt plus 5cm}bool M\-A\-T\-R\-I\-X3\-D\-::det\-\_\-flag\hspace{0.3cm}{\ttfamily [private]}}}\label{class_m_a_t_r_i_x3_d_ab951cbc695222c9cd96d1f2990b1a662}
+
+
+Determinant 계산 여부, 미리 계산하기 위함 
+
+\hypertarget{class_m_a_t_r_i_x3_d_a3d3bd9c2ee0c213ca2f69804c3db6ac6}{\index{M\-A\-T\-R\-I\-X3\-D@{M\-A\-T\-R\-I\-X3\-D}!is\-Set@{is\-Set}}
+\index{is\-Set@{is\-Set}!MATRIX3D@{M\-A\-T\-R\-I\-X3\-D}}
+\subsubsection[{is\-Set}]{\setlength{\rightskip}{0pt plus 5cm}bool M\-A\-T\-R\-I\-X3\-D\-::is\-Set\hspace{0.3cm}{\ttfamily [private]}}}\label{class_m_a_t_r_i_x3_d_a3d3bd9c2ee0c213ca2f69804c3db6ac6}
+
+
+행렬의 값이 설정되었는지 여부 
+
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\-:\begin{DoxyCompactItemize}
+\item 
+My\-Image\-Processing/\hyperlink{matrix_8h}{matrix.\-h}\end{DoxyCompactItemize}

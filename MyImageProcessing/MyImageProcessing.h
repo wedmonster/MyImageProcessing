@@ -18,7 +18,8 @@ class CMyImageProcessingApp : public CWinApp
 {
 public:
 	CMyImageProcessingApp();
-
+	CxImage *m_pNewImage;
+	MyImage *m_NewImage;
 
 // 재정의입니다.
 public:
