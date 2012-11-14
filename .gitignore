@@ -1,5 +1,6 @@
 .gitignore
 Debug/
+Debug\
 ipch/
 MyImageProcessing.opensdf
 MyImageProcessing.sdf

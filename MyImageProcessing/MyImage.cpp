@@ -444,7 +444,8 @@ MyImage MyImage::TransformIntoPolar()
 	int c_x = image->GetWidth() / 2;
 	int c_y = image->GetHeight() / 2;
 
-	MyImage tmp(360,sqrt( pow( c_x, 2.0) + pow(c_y, 2.0) ), image->GetBpp()); 
+	//0~360, 
+	MyImage tmp(361, sqrt( pow( c_x, 2.0) + pow(c_y, 2.0) ), image->GetBpp()); 
 	CxImage* m_pImage = tmp.GetCxImage();
 
 	for(int r = 0; r < m_pImage->GetHeight(); r++){
@@ -460,7 +461,6 @@ MyImage MyImage::TransformIntoPolar()
 
 MyImage MyImage::TransformIntoCartecian()
 {	
-	//int r = (int)sqrt((double)image->GetHeight());
 	int r = (int)(image->GetHeight() / sqrt( 2.0));
 	MyImage tmp(r*2, r*2, image->GetBpp());
 	CxImage* m_pImage = tmp.GetCxImage();
@@ -469,26 +469,10 @@ MyImage MyImage::TransformIntoCartecian()
 
 	for(int y = 0; y < m_pImage->GetHeight(); y++){
 		for(int x = 0; x < m_pImage->GetWidth(); x++){
-			double r = sqrt( pow( c_x - x , 2.0) + pow(c_y - y, 2.0) );
-			/*double theta = 0.0;
-			if(c_x - x != 0){				
-				if(c_y - y == 0.0){
-					if(c_y < y) theta = 270.0;
-					else theta = 90.0;
-				}else{
-					double m = (double)(y - c_y) /(double)(x - c_x);
-					theta = atan(m)*180/M_PI;
-					if(x - c_x < 0) theta += 180;
-					else if(y - c_y < 0) theta += 360;
-				}
-			}else{
-				if(c_x <= x) theta = 0.0;
-				else theta = 180.0;
-			}*/
-
+			double _r = sqrt( pow( c_x - x , 2.0) + pow(c_y - y, 2.0) );			
 			double theta = getDegree(_POINT(c_x, c_y), _POINT(x, y));
 
-			m_pImage->SetPixelColor(x, y, bilinearInterpolation(_POINT(theta, r)));
+			m_pImage->SetPixelColor(x, y, bilinearInterpolation(_POINT(theta, _r)));
 		}
 	}
 	return tmp;
@@ -497,23 +481,33 @@ MyImage MyImage::TransformIntoCartecian()
 double MyImage::getDegree(_POINT& c, _POINT& p)
 {
 	double theta = 0.0;
-	int c_x = (int)c.getX(); int c_y = (int)c.getY();
-	int x = (int)p.getX(); int y = (int)p.getY();
+	double c_x = c.getX(); double c_y = c.getY();
+	double x = p.getX(); double y = p.getY();
 
-	if(c_x - x != 0){				
-		if(c_y - y == 0){
-			if(c_y < y) theta = 270.0;
-			else theta = 90.0;
+	if(fabs(c_x - x) < EPS){
+		//c_x = x
+		if(fabs(c_y - y) < EPS)	theta = 0.0; 
+		else if(c_y > y)		theta = 270.0;
+		else if(c_y < y)		theta = 90.0;
+	}else {
+		if(fabs(c_y - y) < EPS){
+			//c_y = y
+			if(c_x > x) theta = 180;
+			else if(c_x < x) {
+				if(c_y <= y) theta = 0.0;
+				else if(c_y > y) theta = 360.0;
+			}
 		}else{
 			double m = (double)(y - c_y) /(double)(x - c_x);
-			theta = atan(m)*180/M_PI;
-			if(x - c_x < 0) theta += 180;
-			else if(y - c_y < 0) theta += 360;
+			theta = atan(m)*180.0/M_PI;
+			if(x - c_x < 0) theta += 180.0;
+			else if(y - c_y < 0) theta += 360.0;
 		}
-	}else{
-		if(c_x <= x) theta = 0.0;
-		else theta = 180.0;
-	} 
+	}
+
+	if(theta > 360.0) theta = 360.0;
+	else if(theta < 0) theta = 0.0;
+	
 	return theta;
 }
 
