@@ -173,6 +173,19 @@ public:
 	*/
 	MyImage PowerLawImage(double t);
 
+	/**
+	* @breif 이미지를 FFT한 결과를 리턴한다. 지금은 안됨!!
+	* @return FFT image
+	*/
+	void FFT(MyImage& imgM, MyImage& imgP);
+
+
+	/**
+	* @breif 이미지를 DFT한 결과를 리턴한다.
+	* @return DFT image
+	*/
+	void DFT(MyImage& imgM, MyImage& imgP);
+
 private:
 	///이미지를 저장하기 위한 CxImage
 	CxImage* image;
@@ -254,6 +267,24 @@ private:
 	* @param p : 점 좌표
 	*/
 	double getDegree(_POINT& c, _POINT& p);
+
+	/**
+	* @breif 주어진 숫자가 2의 n제곱 형태인지 검사하는 함수
+	* @param x : 값
+	*/
+	bool IsPowerOf2(int x);
+	
+	/**
+	* @breif FFT를 위한 보조 계산 함수
+	* @see FFT()
+	*/
+	bool FFT(int dir, int m, double *x, double* y);
+
+	/**
+	* @breif DFT를 위한 보조 계산 함수
+	* @see DFT()
+	*/
+	bool DFT(int dir, long m, double* x1, double* y1, double* x2, double* y2);
 };
 
 MATRIX3D ScaleT_Matrix(double Cx, double Cy);

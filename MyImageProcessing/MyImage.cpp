@@ -532,3 +532,411 @@ MyImage MyImage::PowerLawImage(double t)
 	return tmp;
 
 }
+
+bool MyImage:: IsPowerOf2(int x){
+	int ref = 1;
+	while(ref < x) ref <<= 1;
+	return ref == x;
+}
+
+bool MyImage::DFT(int dir, long m, double *x1, double *y1, double *x2, double *y2)
+{
+	long i, k;
+	double arg;
+	double cosarg, sinarg;
+
+	for(i = 0; i < m; i++){
+		x2[i] = 0;
+		y2[i] = 0;
+		arg = -dir * 2.0 * PI * i / (double)m;
+		for(k = 0; k < m; k++){
+			cosarg = cos(k * arg);
+			sinarg = sin(k * arg);
+			x2[i] += (x1[k] * cosarg - y1[k] * sinarg);
+			y2[i] += (x1[k] * sinarg - y1[k] * cosarg);
+		}
+	}
+
+	if(dir == 1){
+		for(i = 0; i < m; i++){
+			x1[i] = x2[i] / m;
+			y1[i] = y2[i] / m;
+		}
+	}else{
+		for(i = 0; i < m; i++){
+			x1[i] = x2[i];
+			y1[i] = y2[i];
+		}
+	}
+
+	return true;
+}
+
+void MyImage::DFT(MyImage& imgM, MyImage& imgP)
+{
+	CxImage m_tempM;
+	CxImage m_tempP;
+	m_tempM.Copy(*image);
+	m_tempP.Copy(m_tempM);
+	long FW, FH, FWP, FHP;
+	long width, height;
+	width = m_tempM.GetWidth();
+	height = m_tempM.GetHeight();
+
+	FW = width;
+	FH = height;
+
+	FWP = log10((double)FW)/log10(2.0);
+	FHP = log10((double)FH)/log10(2.0);
+
+	int H, W, m_FDW, m_FDH;
+	W = width = m_tempM.GetWidth();
+	H = height = m_tempM.GetHeight();
+
+	double *x11 = new double[W];
+	double *y11 = new double[W];
+	double *x21 = new double[W];
+	double *y21 = new double[W];
+
+	double *x12 = new double[H];
+	double *y12 = new double[H];
+	double *x22 = new double[H];
+	double *y22 = new double[H];
+
+	int x, y;
+	double **iReal;
+	double **iImg;
+	double **sourceArray;
+	double **iPReal;
+	double **iPImag;
+
+	iReal = new double*[H];
+	iImg = new double*[H];
+	iPReal = new double*[H];
+	iPImag = new double*[H];
+	sourceArray = new double*[H];
+
+	for(x = 0; x < H; x++){
+		iReal[x] = new double[W];
+		iImg[x] = new double[W];
+		iPReal[x] = new double[W];
+		iPImag[x] = new double[W];
+		sourceArray[x] = new double[W];
+	}
+
+	for(y = 0; y < H; y++){
+		for(x = 0; x < W; x++){
+			sourceArray[y][x] = pow(-1.0, x+y)*double(m_tempM.GetPixelGray(x, y));
+		}
+	}
+
+	for(y = 0; y < H; y++){
+		for(x = 0; x < W; x++){
+			x11[x] = sourceArray[y][x];
+			y11[x] = 0.0;
+		}
+		DFT(1, W, x11, y11, x21, y21);
+
+		for(x = 0; x < W; x++){
+			iReal[y][x] = x11[x];
+			iImg[y][x] = y11[x];
+		}
+	}
+
+	for(x = 0; x < W; x++){
+		for(y = 0; y < H; y++){
+			x12[y] = iReal[y][x];
+			y12[y] = iImg[y][x];
+		}
+		DFT(1, H, x12, y12, x22, y22);
+
+		for(y = 0; y < H; y++){
+			iReal[y][x] = iPReal[y][x] = x12[y];
+			iImg[y][x] = iPImag[y][x] = y12[y];
+		}
+	}
+
+	double MAXMVAL = -10000.0;
+	double MINMVAL = 10000.0;
+	double MAXPVAL = -10000.0;
+	double MINPVAL = 10000.0;
+
+	for(y = 0; y < H; y++){
+		for(x = 0; x < W; x++){
+			iReal[y][x] = 0.5*(1.0 + log10(pow((iReal[y][x]*iReal[y][x] + iImg[y][x]*iImg[y][x]), 0.5)));
+			iImg[y][x] = atan(iImg[y][x]/iReal[y][x]);
+			if(iReal[y][x] > MAXMVAL) MAXMVAL = iReal[y][x];
+			if(iReal[y][x] < MINMVAL) MINMVAL = iReal[y][x];
+			if(iImg[y][x] > MAXPVAL) MAXPVAL = iImg[y][x];
+			if(iImg[y][x] < MINPVAL) MINPVAL = iImg[y][x];
+		}
+	}
+
+	for(y = 0; y < H; y++){
+		for(x = 0; x < W; x++){
+			iReal[y][x] = (255.0 / (MAXMVAL-MINMVAL))*(iReal[y][x] - MINMVAL);
+			iImg[y][x] = (255.0 / (MAXPVAL - MINPVAL))*(iImg[y][x] - MINPVAL);
+			m_tempM.SetPixelColor(x, y, RGB(iReal[y][x], iReal[y][x], iReal[y][x]));
+			m_tempP.SetPixelColor(x, y, RGB(iImg[y][x], iImg[y][x], iImg[y][x]));
+		}
+	}
+	
+
+	for(x = 0; x < H; x++){
+		delete iReal[x];
+		delete iImg[x];
+		delete iPReal[x];
+		delete iPImag[x];
+		delete sourceArray[x];
+	}
+
+	delete []x11;
+	delete []x12;
+	delete []x21;
+	delete []x22;
+	delete []y11;
+	delete []y12;
+	delete []y21;
+	delete []y22;
+
+	imgM.GetCxImage()->Copy(m_tempM);
+	imgP.GetCxImage()->Copy(m_tempP);
+}
+
+bool MyImage::FFT(int dir, int m, double *x, double* y){
+	long nn,i,i1,j,k,i2,l,l1,l2;
+	double c1,c2,tx,ty,t1,t2,u1,u2,z;
+	
+	nn = 1 << m;
+
+	i2 = nn >> 1;
+	j = 0;
+
+	for(i = 0 ; i < nn - 1 ; i++ )
+	{
+		if( i < j ) 
+		{
+			tx = x[i];
+			ty = y[i];
+			x[i] = x[j];
+			y[i] = y[j];
+			x[j] = tx;
+			y[j] = ty;
+
+		} // if
+
+		k = 12;
+		while( k <= j )
+		{
+			j -= k;
+			k >>= 1;
+		}//while
+
+		j += k;
+	}// for
+
+	c1 = -1.0;
+	c2 = 0.0;
+	l2 = 1;
+
+	for(l=0; l < m ; l++) {
+
+		l1 = l2;
+		l2 <<= 1;
+		u1 = 1.0;
+		u2 = 0.0;
+
+		for( j = 0 ; j < l1 ; j++ ) {
+			for( i = j ; i < nn ; i += l2 ) {
+
+				i1 = i + l1;
+				t1 = u1 * x[i1] - u2 * y[i1];
+				t2 = u1 * y[i1] + u2 * x[i1];
+
+				x[i1] = x[i] - t1;
+				y[i1] = y[i] - t2;
+				x[i] += t1;
+				y[i] += t2;
+			} // for
+			
+			z = u1 * c1 - u2 * c2;
+			u2 = u1 * c2 + u2 * c1;
+			u1 = z;
+		} // for
+
+		c2 = sqrt( ( 1.0  - c1) / 2.0 );
+		if( dir == 1 )
+			c2 = -c2;
+		c1 = sqrt( ( 1.0 + c1 ) / 2.0 );
+	}// for
+
+	if( dir == 1 ) {
+		for ( i = 0 ; i < nn ; i++ ) {
+			x[i] /= (double)nn;
+			y[i] /= (double)nn;
+		}//for
+	} // if
+
+	return true;
+}
+
+void MyImage::FFT(MyImage& imgM, MyImage& imgP){
+	
+	//----start------
+	CxImage m_tempM;
+	CxImage m_tempP;
+	CxImage m_iFImage;
+
+	m_tempM.Copy(*this->image);
+	m_tempP.Copy(m_tempM);
+	long FW, FH, FWP, FHP;
+	long width, height;
+
+	width = m_tempM.GetWidth();
+	height = m_tempM.GetHeight();
+
+	bool bXpow2 = IsPowerOf2(width);
+	bool bYpow2 = IsPowerOf2(height);
+
+	FW = width;
+	FH = height;
+
+	FWP = log10((double)FW)/log10(2.0);
+	FHP = log10((double)FH)/log10(2.0);
+
+	if(!(bXpow2 && bYpow2))
+	{
+		long i=0;
+		while((1<<i) < width) i++;
+		FW = 1<<i;
+		i = 0;
+		while((1<<i) < height) i++;
+		FH = 1<<i;
+
+		FWP = log10((double)FW)/log10(2.0);
+		FHP = log10((double)FH)/log10(2.0);
+	}
+	m_tempM.Resample(FW, FH, 0);
+	m_tempP.Resample(FW, FH, 0);
+	m_iFImage.Copy(m_tempM);
+
+	int H, W, m_FDW, m_FDH;
+	W = m_FDW = m_tempM.GetWidth();
+	H = m_FDH = m_tempM.GetHeight();
+
+	double *x11 = new double[W];
+	double *y11 = new double[W];
+	double *x21 = new double[W];
+	double *y21 = new double[W];
+
+	double *x12 = new double[H];
+	double *y12 = new double[H];
+	double *x22 = new double[H];
+	double *y22 = new double[H];
+
+	double **iReal, **iPReal;
+	double **iImg, **iPImg;
+	double **sourceArray;
+
+	iReal = new double*[H];
+	iImg = new double*[H];
+	iPReal = new double*[H];
+	iPImg = new double*[H];
+	sourceArray = new double*[H];
+
+	for(int x = 0; x < H; x++){
+		iReal[x] = new double[W];
+		iImg[x] = new double[W];
+		iPReal[x] = new double[W];
+		iPImg[x] = new double[W];
+		sourceArray[x] = new double[W];
+	}
+
+	for(int y = 0; y < H; y++){
+		for(int x = 0; x< W; x++){
+			sourceArray[y][x] = pow(-1.0, x + y) * (double) (m_tempM.GetPixelGray(x, y));
+		}
+	}
+
+	for(int y = 0; y < H; y++){
+		for(int x = 0; x < W; x++){
+			x11[x] = sourceArray[y][x];
+			y11[x] = 0.0;
+		}
+
+		FFT(1, FWP, x11, y11);
+
+		for(int x = 0; x < W; x++){
+			iReal[y][x] = x11[x];
+			iImg[y][x] = y11[x];
+		}
+	}
+
+	for(int x = 0; x < W; x++){
+		for(int y = 0; y < H; y++){
+			x12[y] = iReal[y][x];
+			y12[y] = iImg[y][x];
+		}
+
+		FFT(1, FHP, x12, y12);
+
+		for(int y = 0; y < H; y++){
+			iReal[y][x] = iPReal[y][x] = x12[y];
+			iImg[y][x] = iPImg[y][x] = y12[y];
+		}
+	}
+	
+	double MAXMVAL = -10000.0;
+	double MINMVAL = 10000.0;
+	double MAXPVAL = -10000.0;
+	double MINPVAL = 10000.0;
+
+	for(int y = 0; y < H; y++){
+		for(int x = 0; x < W; x++){
+			iReal[y][x] = 0.5*(1.0 + log10(pow((iReal[y][x]*iReal[y][x] + iImg[y][x]*iImg[y][x]), 0.5)));
+			iImg[y][x] = atan(iImg[y][x] / iReal[y][x]);
+			if(iReal[y][x] > MAXMVAL) MAXMVAL = iReal[y][x];
+			if(iReal[y][x] < MINMVAL) MINMVAL = iReal[y][x];
+			if(iImg[y][x] > MAXPVAL) MAXPVAL = iImg[y][x];
+			if(iImg[y][x] < MINPVAL) MINPVAL = iImg[y][x];
+		}
+	}
+
+	for(int y = 0; y < H; y++){
+		for(int x = 0; x < W; x++){
+			iReal[y][x] = (255.0 / (MAXMVAL - MINMVAL))*(iReal[y][x] - MINMVAL);
+			iImg[y][x] = (255.0 / (MAXPVAL - MINPVAL)) * (iImg[y][x] - MINPVAL);
+			m_tempM.SetPixelColor(x, y, RGB(iReal[y][x], iReal[y][x], iReal[y][x]));
+			m_tempP.SetPixelColor(x, y, RGB(iImg[y][x], iImg[y][x], iImg[y][x]));
+		}
+	}
+
+	for(int x = 0; x < H; x++){
+		delete sourceArray[x];
+		delete iReal[x];
+		delete iImg[x];
+		delete iPImg[x];
+		delete iPReal[x];
+	}
+
+	delete[] sourceArray;
+	delete[] iReal;
+	delete[] iImg;
+	delete[] iPImg;
+	delete[] iPReal;
+
+	delete []x11;
+	delete []y11;
+	delete []x21;
+	delete []y21;
+
+	delete []x12;
+	delete []y12;
+	delete []x22;
+	delete []y22;
+	
+	//----end------
+
+	imgM.GetCxImage()->Copy(m_tempM);
+	imgP.GetCxImage()->Copy(m_tempP);
+}

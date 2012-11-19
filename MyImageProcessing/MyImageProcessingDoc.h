@@ -72,4 +72,6 @@ public:
 	afx_msg void OnCartesianTrans();
 	afx_msg void OnPower();
 	afx_msg void OnOrderMeanfilter();
+	afx_msg void OnFft();
+	afx_msg void OnDft();
 };

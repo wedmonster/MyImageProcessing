@@ -53,6 +53,8 @@ ON_COMMAND(ID_POLAR_TRANS_INV, &CMyImageProcessingDoc::OnPolarTransInv)
 ON_COMMAND(ID_CARTESIAN_TRANS, &CMyImageProcessingDoc::OnCartesianTrans)
 ON_COMMAND(ID_POWER, &CMyImageProcessingDoc::OnPower)
 ON_COMMAND(ID_ORDER_MEANFILTER, &CMyImageProcessingDoc::OnOrderMeanfilter)
+ON_COMMAND(ID_FFT, &CMyImageProcessingDoc::OnFft)
+ON_COMMAND(ID_DFT, &CMyImageProcessingDoc::OnDft)
 END_MESSAGE_MAP()
 
 
@@ -420,4 +422,25 @@ void CMyImageProcessingDoc::OnOrderMeanfilter()
 {
 	// TODO: 여기에 명령 처리기 코드를 추가합니다.
 	ViewImage(m_Image->MeanFilterImage());
+}
+
+
+void CMyImageProcessingDoc::OnFft()
+{
+	// TODO: 여기에 명령 처리기 코드를 추가합니다.
+	MyImage mImage, pImage;
+
+	m_Image->FFT(mImage, pImage);
+	ViewImage(mImage);
+	ViewImage(pImage);
+}
+
+
+void CMyImageProcessingDoc::OnDft()
+{
+	// TODO: 여기에 명령 처리기 코드를 추가합니다.
+	MyImage mImage, pImage;
+	m_Image->DFT(mImage, pImage);
+	ViewImage(mImage);
+	ViewImage(pImage);
 }
