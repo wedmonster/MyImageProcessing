@@ -162,6 +162,10 @@ Public 멤버 함수</h2></td></tr>
 <tr class="memitem:aaaab34952da21ff0590b583b72ecc8cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_my_image.html">MyImage</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_image.html#aaaab34952da21ff0590b583b72ecc8cb">PowerLawImage</a> (double t)</td></tr>
 <tr class="memdesc:aaaab34952da21ff0590b583b72ecc8cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">지수승 t로 power-law를 적용한다.  <a href="#aaaab34952da21ff0590b583b72ecc8cb"></a><br/></td></tr>
 <tr class="separator:aaaab34952da21ff0590b583b72ecc8cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5af8001a6f4332d9063837ae6f48df5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_image.html#ae5af8001a6f4332d9063837ae6f48df5">FFT</a> (<a class="el" href="class_my_image.html">MyImage</a> &amp;imgM, <a class="el" href="class_my_image.html">MyImage</a> &amp;imgP)</td></tr>
+<tr class="separator:ae5af8001a6f4332d9063837ae6f48df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b171aa68f0b7cee751a5b237de4cee4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_image.html#a7b171aa68f0b7cee751a5b237de4cee4">DFT</a> (<a class="el" href="class_my_image.html">MyImage</a> &amp;imgM, <a class="el" href="class_my_image.html">MyImage</a> &amp;imgP)</td></tr>
+<tr class="separator:a7b171aa68f0b7cee751a5b237de4cee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private 멤버 함수</h2></td></tr>
@@ -198,6 +202,12 @@ Private 멤버 함수</h2></td></tr>
 <tr class="memitem:a2ee075ed79cf8759bcaa5efa2e145ef5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_image.html#a2ee075ed79cf8759bcaa5efa2e145ef5">getDegree</a> (<a class="el" href="class___p_o_i_n_t.html">_POINT</a> &amp;c, <a class="el" href="class___p_o_i_n_t.html">_POINT</a> &amp;p)</td></tr>
 <tr class="memdesc:a2ee075ed79cf8759bcaa5efa2e145ef5"><td class="mdescLeft">&#160;</td><td class="mdescRight">기준점 c와 점 p가 이루는 각을 동경(1, 0)을 기준으로 계산  <a href="#a2ee075ed79cf8759bcaa5efa2e145ef5"></a><br/></td></tr>
 <tr class="separator:a2ee075ed79cf8759bcaa5efa2e145ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49eaf3ff0a985f175d4e0987b4142886"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_image.html#a49eaf3ff0a985f175d4e0987b4142886">IsPowerOf2</a> (int x)</td></tr>
+<tr class="separator:a49eaf3ff0a985f175d4e0987b4142886"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbed1dc5cf5664fb0001330b7ab5f236"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_image.html#afbed1dc5cf5664fb0001330b7ab5f236">FFT</a> (int dir, int m, double *x, double *y)</td></tr>
+<tr class="separator:afbed1dc5cf5664fb0001330b7ab5f236"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b00b867cc5629c01ca64de93bdbb813"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_my_image.html#a3b00b867cc5629c01ca64de93bdbb813">DFT</a> (int dir, long m, double *x1, double *y1, double *x2, double *y2)</td></tr>
+<tr class="separator:a3b00b867cc5629c01ca64de93bdbb813"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private 속성</h2></td></tr>
@@ -512,6 +522,170 @@ Private 속성</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a7b171aa68f0b7cee751a5b237de4cee4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MyImage::DFT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_my_image.html">MyImage</a> &amp;&#160;</td>
+          <td class="paramname"><em>imgM</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_my_image.html">MyImage</a> &amp;&#160;</td>
+          <td class="paramname"><em>imgP</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>이미지를 DFT한 결과를 리턴한다. </p>
+<dl class="section return"><dt>반환값</dt><dd>DFT image </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3b00b867cc5629c01ca64de93bdbb813"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MyImage::DFT </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>x2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>y2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>DFT를 위한 보조 계산 함수 </p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="class_my_image.html#a7b171aa68f0b7cee751a5b237de4cee4">DFT()</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae5af8001a6f4332d9063837ae6f48df5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MyImage::FFT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_my_image.html">MyImage</a> &amp;&#160;</td>
+          <td class="paramname"><em>imgM</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_my_image.html">MyImage</a> &amp;&#160;</td>
+          <td class="paramname"><em>imgP</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>이미지를 FFT한 결과를 리턴한다. 지금은 안됨!! </p>
+<dl class="section return"><dt>반환값</dt><dd>FFT image </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afbed1dc5cf5664fb0001330b7ab5f236"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MyImage::FFT </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>FFT를 위한 보조 계산 함수 </p>
+<dl class="section see"><dt>참고</dt><dd><a class="el" href="class_my_image.html#ae5af8001a6f4332d9063837ae6f48df5">FFT()</a> </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="af8815f475d86d16653e4295b94fba5af"></a>
 <div class="memitem">
 <div class="memproto">
@@ -823,6 +997,37 @@ Private 속성</h2></td></tr>
 
 <p>이미지 색상을 반전시킨다. </p>
 <dl class="section return"><dt>반환값</dt><dd>Inversed image </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a49eaf3ff0a985f175d4e0987b4142886"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MyImage::IsPowerOf2 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>주어진 숫자가 2의 n제곱 형태인지 검사하는 함수 </p>
+<dl class="params"><dt>매개변수</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>: 값 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1184,13 +1389,13 @@ Private 속성</h2></td></tr>
 </div>
 </div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
-<li>MyImageProcessing/<a class="el" href="_my_image_8h_source.html">MyImage.h</a></li>
-<li>MyImageProcessing/<a class="el" href="_my_image_8cpp.html">MyImage.cpp</a></li>
+<li>H:/Repository/MyImageProcessing/MyImageProcessing/<a class="el" href="_my_image_8h_source.html">MyImage.h</a></li>
+<li>H:/Repository/MyImageProcessing/MyImageProcessing/<a class="el" href="_my_image_8cpp.html">MyImage.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-생성시간 : 일 11월 11 2012 01:23:01, 프로젝트명 : MyImageProcessing, 생성자 :  &#160;<a href="http://www.doxygen.org/index.html">
+생성시간 : 월 11월 19 2012 19:28:15, 프로젝트명 : MyImageProcessing, 생성자 :  &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

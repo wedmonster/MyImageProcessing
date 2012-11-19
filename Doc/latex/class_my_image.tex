@@ -58,7 +58,11 @@ bool \hyperlink{class_my_image_af66f432007e738f823339d4687a218ad}{Load} (L\-P\-C
 \hyperlink{class_my_image}{My\-Image} \hyperlink{class_my_image_aa53e9b0fa696a4de66da49b13b9afd48}{Transform\-Into\-Cartecian} ()
 \begin{DoxyCompactList}\small\item\em 총 크기 r/root(2) by r/root(2)이고 (r/root(2), r/root(2))이 중심인 직각좌표계로 변환한 이미지를 반환한다. r은 이미지의 height이다. \end{DoxyCompactList}\item 
 \hyperlink{class_my_image}{My\-Image} \hyperlink{class_my_image_aaaab34952da21ff0590b583b72ecc8cb}{Power\-Law\-Image} (double t)
-\begin{DoxyCompactList}\small\item\em 지수승 t로 power-\/law를 적용한다. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 지수승 t로 power-\/law를 적용한다. \end{DoxyCompactList}\item 
+void \hyperlink{class_my_image_ae5af8001a6f4332d9063837ae6f48df5}{F\-F\-T} (\hyperlink{class_my_image}{My\-Image} \&img\-M, \hyperlink{class_my_image}{My\-Image} \&img\-P)
+\item 
+void \hyperlink{class_my_image_a7b171aa68f0b7cee751a5b237de4cee4}{D\-F\-T} (\hyperlink{class_my_image}{My\-Image} \&img\-M, \hyperlink{class_my_image}{My\-Image} \&img\-P)
+\end{DoxyCompactItemize}
 \subsection*{Private 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
@@ -83,7 +87,13 @@ R\-G\-B\-Q\-U\-A\-D \hyperlink{class_my_image_a2e9eda07e542c7d166a9b51df8f57d04}
 R\-G\-B\-Q\-U\-A\-D \hyperlink{class_my_image_a454bd6266ccaa80824c25374bb49411b}{get\-Mean\-R\-G\-B} (\hyperlink{class___p_o_i_n_t}{\-\_\-\-P\-O\-I\-N\-T} \&input)
 \begin{DoxyCompactList}\small\item\em 기준 좌표를 중심으로 3 by 3내의 값중 평균 R\-G\-B값을 리턴 현재는 각 채널 별로 값을 뽑아서 조합하여 리턴하는 것으로 하고 있음. \end{DoxyCompactList}\item 
 double \hyperlink{class_my_image_a2ee075ed79cf8759bcaa5efa2e145ef5}{get\-Degree} (\hyperlink{class___p_o_i_n_t}{\-\_\-\-P\-O\-I\-N\-T} \&c, \hyperlink{class___p_o_i_n_t}{\-\_\-\-P\-O\-I\-N\-T} \&p)
-\begin{DoxyCompactList}\small\item\em 기준점 c와 점 p가 이루는 각을 동경(1, 0)을 기준으로 계산 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 기준점 c와 점 p가 이루는 각을 동경(1, 0)을 기준으로 계산 \end{DoxyCompactList}\item 
+bool \hyperlink{class_my_image_a49eaf3ff0a985f175d4e0987b4142886}{Is\-Power\-Of2} (int x)
+\item 
+bool \hyperlink{class_my_image_afbed1dc5cf5664fb0001330b7ab5f236}{F\-F\-T} (int dir, int m, double $\ast$x, double $\ast$y)
+\item 
+bool \hyperlink{class_my_image_a3b00b867cc5629c01ca64de93bdbb813}{D\-F\-T} (int dir, long m, double $\ast$x1, double $\ast$y1, double $\ast$x2, double $\ast$y2)
+\end{DoxyCompactItemize}
 \subsection*{Private 속성}
 \begin{DoxyCompactItemize}
 \item 
@@ -265,6 +275,56 @@ Bilinear Interpolation을 위한 보조 계산 함수
 {\em input} & \-: 기준 좌표 \\
 \hline
 \end{DoxyParams}
+\hypertarget{class_my_image_a7b171aa68f0b7cee751a5b237de4cee4}{\index{My\-Image@{My\-Image}!D\-F\-T@{D\-F\-T}}
+\index{D\-F\-T@{D\-F\-T}!MyImage@{My\-Image}}
+\subsubsection[{D\-F\-T}]{\setlength{\rightskip}{0pt plus 5cm}void My\-Image\-::\-D\-F\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf My\-Image} \&}]{img\-M, }
+\item[{{\bf My\-Image} \&}]{img\-P}
+\end{DoxyParamCaption}
+)}}\label{class_my_image_a7b171aa68f0b7cee751a5b237de4cee4}
+이미지를 D\-F\-T한 결과를 리턴한다. \begin{DoxyReturn}{반환값}
+D\-F\-T image 
+\end{DoxyReturn}
+\hypertarget{class_my_image_a3b00b867cc5629c01ca64de93bdbb813}{\index{My\-Image@{My\-Image}!D\-F\-T@{D\-F\-T}}
+\index{D\-F\-T@{D\-F\-T}!MyImage@{My\-Image}}
+\subsubsection[{D\-F\-T}]{\setlength{\rightskip}{0pt plus 5cm}bool My\-Image\-::\-D\-F\-T (
+\begin{DoxyParamCaption}
+\item[{int}]{dir, }
+\item[{long}]{m, }
+\item[{double $\ast$}]{x1, }
+\item[{double $\ast$}]{y1, }
+\item[{double $\ast$}]{x2, }
+\item[{double $\ast$}]{y2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_my_image_a3b00b867cc5629c01ca64de93bdbb813}
+D\-F\-T를 위한 보조 계산 함수 \begin{DoxySeeAlso}{참고}
+\hyperlink{class_my_image_a7b171aa68f0b7cee751a5b237de4cee4}{D\-F\-T()} 
+\end{DoxySeeAlso}
+\hypertarget{class_my_image_ae5af8001a6f4332d9063837ae6f48df5}{\index{My\-Image@{My\-Image}!F\-F\-T@{F\-F\-T}}
+\index{F\-F\-T@{F\-F\-T}!MyImage@{My\-Image}}
+\subsubsection[{F\-F\-T}]{\setlength{\rightskip}{0pt plus 5cm}void My\-Image\-::\-F\-F\-T (
+\begin{DoxyParamCaption}
+\item[{{\bf My\-Image} \&}]{img\-M, }
+\item[{{\bf My\-Image} \&}]{img\-P}
+\end{DoxyParamCaption}
+)}}\label{class_my_image_ae5af8001a6f4332d9063837ae6f48df5}
+이미지를 F\-F\-T한 결과를 리턴한다. 지금은 안됨!! \begin{DoxyReturn}{반환값}
+F\-F\-T image 
+\end{DoxyReturn}
+\hypertarget{class_my_image_afbed1dc5cf5664fb0001330b7ab5f236}{\index{My\-Image@{My\-Image}!F\-F\-T@{F\-F\-T}}
+\index{F\-F\-T@{F\-F\-T}!MyImage@{My\-Image}}
+\subsubsection[{F\-F\-T}]{\setlength{\rightskip}{0pt plus 5cm}bool My\-Image\-::\-F\-F\-T (
+\begin{DoxyParamCaption}
+\item[{int}]{dir, }
+\item[{int}]{m, }
+\item[{double $\ast$}]{x, }
+\item[{double $\ast$}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_my_image_afbed1dc5cf5664fb0001330b7ab5f236}
+F\-F\-T를 위한 보조 계산 함수 \begin{DoxySeeAlso}{참고}
+\hyperlink{class_my_image_ae5af8001a6f4332d9063837ae6f48df5}{F\-F\-T()} 
+\end{DoxySeeAlso}
 \hypertarget{class_my_image_af8815f475d86d16653e4295b94fba5af}{\index{My\-Image@{My\-Image}!get\-Channel\-Color@{get\-Channel\-Color}}
 \index{get\-Channel\-Color@{get\-Channel\-Color}!MyImage@{My\-Image}}
 \subsubsection[{get\-Channel\-Color}]{\setlength{\rightskip}{0pt plus 5cm}int My\-Image\-::get\-Channel\-Color (
@@ -443,6 +503,18 @@ Histogram Equalized image
 \begin{DoxyReturn}{반환값}
 Inversed image 
 \end{DoxyReturn}
+\hypertarget{class_my_image_a49eaf3ff0a985f175d4e0987b4142886}{\index{My\-Image@{My\-Image}!Is\-Power\-Of2@{Is\-Power\-Of2}}
+\index{Is\-Power\-Of2@{Is\-Power\-Of2}!MyImage@{My\-Image}}
+\subsubsection[{Is\-Power\-Of2}]{\setlength{\rightskip}{0pt plus 5cm}bool My\-Image\-::\-Is\-Power\-Of2 (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{class_my_image_a49eaf3ff0a985f175d4e0987b4142886}
+주어진 숫자가 2의 n제곱 형태인지 검사하는 함수 
+\begin{DoxyParams}{매개변수}
+{\em x} & \-: 값 \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_my_image_ac66955eba0161330746e7184c63b6a70}{\index{My\-Image@{My\-Image}!Laplacian\-Filter\-Image@{Laplacian\-Filter\-Image}}
 \index{Laplacian\-Filter\-Image@{Laplacian\-Filter\-Image}!MyImage@{My\-Image}}
 \subsubsection[{Laplacian\-Filter\-Image}]{\setlength{\rightskip}{0pt plus 5cm}{\bf My\-Image} My\-Image\-::\-Laplacian\-Filter\-Image (
@@ -673,5 +745,5 @@ image in Polar-\/coordination
 
 이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\-:\begin{DoxyCompactItemize}
 \item 
-My\-Image\-Processing/\hyperlink{_my_image_8h}{My\-Image.\-h}\item 
-My\-Image\-Processing/\hyperlink{_my_image_8cpp}{My\-Image.\-cpp}\end{DoxyCompactItemize}
+H\-:/\-Repository/\-My\-Image\-Processing/\-My\-Image\-Processing/\hyperlink{_my_image_8h}{My\-Image.\-h}\item 
+H\-:/\-Repository/\-My\-Image\-Processing/\-My\-Image\-Processing/\hyperlink{_my_image_8cpp}{My\-Image.\-cpp}\end{DoxyCompactItemize}

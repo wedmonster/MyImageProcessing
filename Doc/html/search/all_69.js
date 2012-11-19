@@ -23,7 +23,12 @@ var searchData=
   ['id_5f32812',['ID_32812',['../resource_8h.html#a8f8b1568cea23d2d4900195a5b2770c9',1,'resource.h']]],
   ['id_5f32819',['ID_32819',['../resource_8h.html#a1901af99119468bcc0d523bb9fbde4fa',1,'resource.h']]],
   ['id_5f32820',['ID_32820',['../resource_8h.html#acdffcb25bdb6c7aa9bd5cf4e35ff8027',1,'resource.h']]],
+  ['id_5f32823',['ID_32823',['../resource_8h.html#a960a56f8cb83301547c016a16f75897d',1,'resource.h']]],
+  ['id_5f32824',['ID_32824',['../resource_8h.html#a9cde081b4d7b2a0cb89dd0f6cfc30690',1,'resource.h']]],
+  ['id_5f32826',['ID_32826',['../resource_8h.html#af948e3906ce45c91a9174fcca37149d1',1,'resource.h']]],
   ['id_5fcartesian_5ftrans',['ID_CARTESIAN_TRANS',['../resource_8h.html#aa268f637be510dee8905d0c6401fce0e',1,'resource.h']]],
+  ['id_5fdft',['ID_DFT',['../resource_8h.html#a0ebd31839181c1595c1ddcd925bc9f73',1,'resource.h']]],
+  ['id_5ffft',['ID_FFT',['../resource_8h.html#a608f2331f037f887356c29633d9f3cbb',1,'resource.h']]],
   ['id_5ffile_5fnew_5fopen',['ID_FILE_NEW_OPEN',['../resource_8h.html#a5247a3e12b2106e706baf34c0866cdc2',1,'resource.h']]],
   ['id_5fhigh_5fboost',['ID_HIGH_BOOST',['../resource_8h.html#ab42dc9d3c53578d1f52f8d39ffdaa195',1,'resource.h']]],
   ['id_5fhist',['ID_HIST',['../resource_8h.html#a37c25e5f93616faa2b9a092a9d627799',1,'resource.h']]],
@@ -55,7 +60,6 @@ var searchData=
   ['id_5fwindow_5fmanager',['ID_WINDOW_MANAGER',['../resource_8h.html#a524fdae53a9c70ea25c9e1d3aae313b6',1,'resource.h']]],
   ['idc_5fbinthre',['IDC_BINTHRE',['../resource_8h.html#a82c75217d09206ca3164dc2d5476130d',1,'resource.h']]],
   ['idc_5fcombo_5ftype',['IDC_COMBO_TYPE',['../resource_8h.html#a47494779835618b6ecc86340217ee999',1,'resource.h']]],
-  ['idc_5fedit_5fr',['IDC_EDIT_R',['../resource_8h.html#a0a33db1f6cba64ee7909a4b884dc91a2',1,'resource.h']]],
   ['idc_5fedit_5fscl_5fheight',['IDC_EDIT_SCL_HEIGHT',['../resource_8h.html#a5626bb224b13f5dbbd4189c02540adbc',1,'resource.h']]],
   ['idc_5fedit_5fscl_5fwidth',['IDC_EDIT_SCL_WIDTH',['../resource_8h.html#a97f51a9b646b85ad2b27590d2a1ecd4d',1,'resource.h']]],
   ['idc_5fedit_5ft',['IDC_EDIT_T',['../resource_8h.html#a49c8b3b88eeaa91ff878a6507c58c571',1,'resource.h']]],
@@ -78,5 +82,6 @@ var searchData=
   ['inverse',['inverse',['../class_m_a_t_r_i_x2_d.html#a8593d4fd11d45ea256047900ebc77307',1,'MATRIX2D::inverse()'],['../class_m_a_t_r_i_x3_d.html#a4133adf628205e22c49d420d80f4336e',1,'MATRIX3D::inverse()']]],
   ['inverseimage',['InverseImage',['../class_my_image.html#ab1b09108047771667e6eea6974a1ba44',1,'MyImage']]],
   ['isinversible',['isInversible',['../class_m_a_t_r_i_x2_d.html#ae5018742fa0dfa84dbb2466c0789bdcd',1,'MATRIX2D::isInversible()'],['../class_m_a_t_r_i_x3_d.html#ae04bbddf00d6572e12b67eb9a0d6d55f',1,'MATRIX3D::isInversible()']]],
+  ['ispowerof2',['IsPowerOf2',['../class_my_image.html#a49eaf3ff0a985f175d4e0987b4142886',1,'MyImage']]],
   ['isset',['isSet',['../class_m_a_t_r_i_x3_d.html#a3d3bd9c2ee0c213ca2f69804c3db6ac6',1,'MATRIX3D']]]
 ];
